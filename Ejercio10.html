@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<h1>REGISTRO ASOCIACIÓN extrema IA</h1>
+			<!-- method:post/get -->
+			<form action="pagina1.php" method="get">
+			<fieldset>
+				<legend>Datos de registro</legend>
+				<div>
+				<label for="nombre">Nombre y Apellidos</label>
+				</br>
+				<input id="nombre" name="nombre" type="text" placeholder="introduce tu nombre y apellidos"
+				maxlength="10"/>
+				</div>
+				</br>
+				<div>
+					<label for="fechaN">Fecha de Nacimiento</label>
+					</br>
+					<input id="fechaN" name="fechaN" type="date" value="2000-01-01"/>
+				</div>
+				<div>
+					<label for="email">Email</label>
+					</br>
+					<input id="email" name="email" type="email" placeholder="aa@bb.com"/>
+				</div>
+				<div>
+					<label for="ps">Contraseña</label>
+					</br>
+					<input id="ps" name="ps" type="password"
+				</div>
+				<fieldset>
+				<legend>Datos Laborales</legend>
+				<!-- RadioButtons, solomente puede haber uno seleccionado -->
+				
+				<div>
+					<label for="años experiencia">Años de experiencia</label>
+					</br>
+					<input id="años experiencia" name="años experiencia" type="años experiencia" placeholder="1"/>
+				</div>
+				<div>
+				</br>
+				<!-- Listas desplegables: sololamente se puede una opción -->
+				<label for="puesto">Puesto Actual</label>
+				</br>
+			    <select id="puesto" name="puesto" multiple="multiple">
+					<option value="1">Arquitecto de datos</option>
+					<option value="2" select="selected">Ingeniero de Machine Learnig</option>
+					<option value="3">Científico de datos</option>
+					<option value="4">Analista de datos</option>
+				</select>
+				</div>
+				</br>
+				
+				<!-- CAMPO DE TEXTO -->
+				<div>
+					<label for="comentario">Comentario</label>
+					</br>
+					<textarea id="comentario" name="comentario"
+						      placeholder="Escribe un comentario"
+							  cols="cols" rows="10"></textarea>
+					
+				</div>
+</html>				

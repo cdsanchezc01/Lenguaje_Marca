@@ -1,0 +1,494 @@
+<!DOCTYPE html/>
+<html>
+
+	<head>
+		<title>Apuntes HTML</title>
+		<meta charset="UTF-8"/>
+		<!-- COLOR TITÚLOS -->
+		<style>
+			h1{
+				color: red;
+				text-align:center;
+			}
+		</style>
+	</head>
+	<body>
+		<!--ÍNDICE-->
+		<!--MARCADORES-->
+		<a id="inicio"/><h1>Índice</h1>
+		<ul>		
+			<li><a href="#parrafo">Párrafo</a></li>
+			<li><a href="#titulo">Título</a></li>
+			<li><a href="#lineasH">Líneas Horizontales</a></li>
+			<li><a href="#marcado">Marcado de texto</a></li>
+			<li><a href="#listas">Listas</a></li>
+			<li><a href="#enlaces">Enlaces</a></li>
+		</ul>
+		
+	<!-- esto es un comentario 
+		que puede ocupar varias líneas -->
+		
+		<!-- TRATAMIENTO DE ESPACION EN BLANCOS -->
+		Si ponemos           varios espacios en blanco 
+		en un texto         solamente     se 
+		muestra el primero.
+		<br/>
+		Si ponemos &nbsp; &nbsp; &nbsp; &nbsp; la entidad 
+		de espacios en  blancos &nbsp; &nbsp; &nbsp; &nbsp;
+		si podemos poner varios espacios consecutivos. 
+		<!-- PÁRRAFOS -->
+		<a id="parrafo"/><h1>PÁRRAFOS</h1><a href="#inicio">Volver</a>
+		<P>
+		Un párrafo es un conjunto de lineas.
+		Aunque se intruduczan saltos de líneas entre 
+		las líneas  de un párrafo, no se van 
+		a separar en el navegador.
+		</P>
+		<p>
+		Esto es otro párrafo
+		</p>
+		<!-- TÍTULO -->
+		<a id="titulo"/><h1>TÍTULO</h1><a href="#inicio">Volver</a>
+		<h1>Título de nivel 1</h1>
+		<h2>Título de nivel 2</h2>
+		<h3>Título de nivel 3</h3>
+		<h4>Título de nivel 4</h4>
+		<h5>Título de nivel 5</h5>
+		<h6>Título de nivel 6</h6>
+		<!-- Líneas orizontales -->
+		<a id="lineasH"/><h1>LÍNEAS HORIZONTALES</h1><a href="#inicio">Volver</a>
+		<p>
+			<h1>Tema 2</h1><hr/> Aprendiendo html 
+		</p>
+		<meta charset= "UTF-8"/>
+		<title>Apntes</title>
+	</head>
+	<body>
+		<!--Marcado de texto-->
+		<div>
+			<a id="marcado"/><h1>MARCADO DE TEXTO</h1><a href="#inicio">Volver</a><br/>
+			Tipo de marcado <b>negrita</b> <br/>
+			Tipo de marcado <strong>strong</strong> <br/>
+			Tipo de marcado <em>énfasis</em> <br/>
+			Tipo de marcado <i>cursiva</i> <br/>
+			Tipo de marcado <sup>suríndice</sup> <br/>
+			Tipo de marcado <sub>supíndice</sub> <br/>
+			Tipo de marcado <u>subrayado</u> <br/>
+			Tipo de marcado <u>subrayado</u> <br/>
+		</div>
+		<!--Listas-->
+		<a id="listas"/><h1>LISTAS</h1><a href="#inicio">Volver</a>
+		<div>
+			<h1>Mis asignaturas preferidas</h1>
+			<!--Listas no ordenadas-->
+			<ul>
+				<li>Lenguajes de marcas</li>
+				<li>Programación</li>
+				<li>Base de datos</li>
+			</ul>
+			<ul type="scuare">
+				<li>Lenguajes de marcas</li>
+				<li>Programación</li>
+				<li>Base de datos</li>
+			</ul>	
+			<!--Listas ordenadas-->
+			
+			<ol>
+				<li>Lenguajes de marcas</li>
+				<li>Programación</li>
+				<li>Base de datos</li>
+			</ol>	
+			
+			<ol type="a">
+				<li>Lenguajes de marcas</li>
+				<li>Programación</li>
+				<li>Base de datos</li>
+			</ol>
+			
+			<ol type="I">
+				<li>Lenguajes de marcas</li>
+				<li>Programación</li>
+				<li>Base de datos</li>
+			</ol>
+			
+				<h2>Listado de software por asignatura</h2>
+				<ul>
+					<li>Lenguaje de marcas
+						<ol>
+							<li>Notepad ++</li>
+							<li>Chorome</li>
+						</ol>
+					</li>
+					
+					<li>Programación
+						<ol>
+							<li>Eclipse</li> 
+							<li>Java</li>
+							
+						</ol>	
+					</li>
+					
+					<li>Base de datos</l>
+						<ol>
+							<li>MySQL server</Li>
+							<li>MySQL Wordbench</li>
+						</ol>
+					</li>
+				</ul>
+				<!--ENLACES EXTERNOS-->
+				<div>
+					<a id="enlaces"/><h1>ENLACES EXTERNOS</h1><a href="#inicio">Volver</a><br/>
+					Enlace externo a la Pagina web del instituto:
+					<a href= "https://iesaugustobriga.educarex.es/" 
+					target="_blank">IES Augustóbriga</a><br/>
+					Enlace externo a <a href= "Continuacióntrabajo.html" target = "_blank"> ejercicio 1</a><br/>
+					Enlace externo a <a href= "enlaces/aa.html" target = "_blank">enlaces/aa.html </a><br/>
+				</div>
+				
+				<!-- IMÁGENES-->
+				<div>
+					<h1>MOSTRAR LA IMAGEN CON FORMATO PNG</h1>
+					<img src="img/perro.PNG" alt="Imagen Perro" width="50%"/>
+					<img src="img/perro.PNG" alt="Imagen Perro" width="200px"/>
+					<img src="img/perro.PNG" alt="Imagen Perro" width="200px" height="50px"/>
+				</div>
+					
+				<div>
+					<h1>MOSTRAR LA IMAGEN CON FORMATO SVG</h1>
+					<img src="img/perro.svg" alt="Imagen Perro" width="50%"/>
+					<!-- Con formato svg no se pixela -->
+					<!-- <img src="img/perro.svg" alt="Imagen perro" width="200&"/> -->
+				</div>
+				<div>
+					<h1>MOSTRAR UNA IMAGEN QUE NO ESTÁ EN LA CARPETA ACTUAL</h1>
+					<img src="../cuadro.png" alt="" width="10&"/>
+				</div>
+				<div>
+					<h1>MOSTRAR UNA IMAGEN DESDE UNA URL</h1>
+					<img src="https://iesaugustobriga.educarex.es/images/logos21/candil_resultado.jpg" 
+					alt="Radio el Candil" width="10%"/>
+				</div>
+				
+				<!-- MAPAS DE IMÁGENES-->
+				<div>
+					<h1>Mapa de Imagen</h1>									
+					<!-- CARGA MAPA -->
+					<img src="img/figura.png" alt="Mapa de imagen" usemap="#formas />
+					<!-- CREACIÓN DEL MAPA -->
+					<map id="formas" name="formas"
+						<!-- definir area de cabeza -->
+						<area shape="rect" coords="322,0,400,78" alt="cabeza" href="cabeza.HTML"/>
+						<area shape="circle" coords="296,280,30" alt="pie derecho" href="pieD.HTML"/>
+						<area shape="poly" coords="166,80,322,80,321,233" alt="cuerpo" href="cuerpo.HTML"/>
+					</map>
+
+					
+				<!-- CANVAS -->
+				<h1>Canva</h1>
+				<div>
+					<canvas id="lienzo" width="400" height="400"/>
+					<script type="text/javascript">
+						var canvas = document.getElementById("lienzo");
+						var contexto = canvas.getContext("2d");
+						contexto.lineWidth=2;
+						contexto.strokeStyle="blue";
+						for(i=0;i<400;i+=20){
+							contexto.moveTo(200,0);
+							contexto.lineTo(i,400);
+							contexto.stroke();
+						}
+					</script>
+				</div>
+				
+				<!-- Tabla Simple -->
+				<div>
+					<table border="1" align="center" width="50%">
+						<tr>
+							<td>Nº Expediente</td>
+							<td>DNI</td>
+							<td>Nombre</td>
+							<td>Curso</td>
+						</tr>
+							
+						<tr>
+							<td>1234</td>
+							<td>12345678T</td>
+							<td>José Martínez</td>
+							<td>1º DAM</td>
+						</tr>
+						<tr>
+							<td>9876</td>
+							<td>87654321C</td>
+							<td>Eva María</td>
+							<td>1º DAM</td>
+						</tr>
+						<tr>
+							<td>765</td>
+							<td>75656754C</td>
+							<td> María Sánchez</td>
+							<td>1º DAM</td>
+						</tr>
+						<tr>
+							<td>8756</td>
+							<td>82344321C</td>
+							<td>Juan Álvarez</td>
+							<td>1º DAM</td>
+						</tr>
+					</table>
+				</div>	
+				<!-- Tabla con agrupaciones: cabecera, cuerpo y pie -->
+				<!-- rules: groups, cols, rows, all -->
+				<table border="1" rules="all">
+						<caption>Ventas último trimestre</caption>
+						<thead>
+							<tr>
+								<td>Provincia</td>
+								<td>Octubre</td>
+								<td>Noviembre</td>
+								<td>Diciembre</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Cáceres</td>
+								<td>1000</td>
+								<td>2000</td>
+								<td>3000</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td>Badajoz</td>
+								<td>2000</td>
+								<td>1000</td>
+								<td>900</td>
+							</tr>
+						</tfoot>
+				</table>
+				<!-- Tabla con celdas convinadas -->
+				<table border="1">
+					<tr>
+						<!-- Solamente tiene una celda -->
+						<th colspan="3">TORNEO DE PÁDEL 2023</th>
+					</tr>
+						
+					<tr>
+						<!-- Tiene 3 celdas -->
+						<td><b><center>Semifinales</center></b></td>
+						<td><b><center>Final</center></b></td>
+						<td><b><center>Ganador</center></b></td>
+					</tr>
+						
+					<tr>
+						<!-- Tiene 3 celdas, la primera normal, 
+						la segunda 2 filas y la tercera ocupa 3 filas -->
+						<td>Ana</td>
+						<td rowspan="2">Ana</td>
+						<td rowspan="4">Ana</td>
+
+					</tr>
+					<tr>
+						<!-- Tiene 1 celdas -->
+						<td>Jimena</td>
+					</tr>
+					<tr>
+						<!-- Tiene 2 celdas -->
+						<td>Míriam</td>
+						<td rowspan="2">Lucía</td>
+					</tr>
+					<tr>
+						<!-- Tiene 1 celdas -->
+						<td>Lucía</td>
+					</tr>
+				</table>
+			</div>
+			<!-- Etiquetas div y span -->
+			<div>
+				Bloque número <span style="color:red;">1</span>
+			</div>
+			<div>
+				Bloque número <span style="color:blue;">2</span>
+			</div>
+			<!-- Formularios -->
+			<h1>FORMULARIOS</h1>
+			<!-- method:post/get -->
+			<form action="pagina1.php" method="get">
+			<fieldset>
+				<legend>Datos personales</legend>
+				<div>
+				<label for="nombre">Nombre</label>
+				</br>
+				<input id="nombre" name="nombre" type="text" placeholder="introduce tu nombre"
+				maxlength="10"/>
+				</div>
+				</br>
+				<div>
+				<label for="ape">Apellidos</label>
+				</br>
+				<input id="ape" name="ape" type="text" value="introduce apellido" 
+				size="100"/>
+				</div>
+				</br>
+				<div>
+				<label for="dni">DNI</label>
+				</br>
+				<input id="dni" name="dni" type="text" placeholder="012345678A" 
+				maxlength="9" required="required"/>
+				</div>
+				<div>
+					<label for="ps">Contraseña</label>
+					</br>
+					<input id="ps" name="ps" type="password"
+				</div>
+				<div>
+					<label for="curso">Curso</label>
+					</br>
+					<input id="curso" name="curso" type="number" value="1"/>
+				</div>
+				<div>
+					<label for="fechaN">Fecha de nacimiento</label>
+					</br>
+					<input id="fechaN" name="fechaN" type="date" value="2000-01-01"/>
+				</div>
+				<div>
+					<label for="fecha">Fecha de matrícula</label>
+					</br>
+					<input id="fecha" name="fecha" type="date"/>
+					<input id="hora" name="hora" type="time"/>
+				</div>
+				<div>
+					<label for="">Teléfono</label>
+					</br>
+					<input id="telefono" name="telefono" type="tel" placeholder="654 22 11 22" 
+					pattern="[6-8][0-9]{2} [0-9] {2} [0-9]{2} [0-9]{2}" maxlength="12"/>
+				</div>
+				<div>
+					<label for="email">Email</label>
+					</br>
+					<input id="email" name="email" type="email" placeholder="aa@bb.com"/>
+				</div>
+				<div>
+					<label for="perfil">Perfil de Linkedin</label>
+					</br>
+					<input id="perfil" name="perfil" type="url" placeholder="http://"/>
+				</div>
+				<div>
+					<label for="color">Color Favorito</label>
+					</br>
+					<input id="color" name="color" type="color" value="#0000FF"/>
+				</div>
+				<div>
+						<!-- Botón que envía los datos del fromulario al servidor -->
+				<input id="enviar" name="enviar" type="submit" value="Enviar"/>
+				<input id="limpiar" name="limpiar" type="reset" value="Limpiar"/>
+				<input id="hm" name="hm" type="button" value="HolaMundo"
+				onclick="alert('Hola Mundo')"/>
+				</div>
+				<div>
+					<button id="enviar1" name="enviar1" type="submit" >Enviar</button>
+					<button id="limpiar1" name="limpiar1" type="reset" >Limpiar</button>
+					<button id="hm1" name="hm1" type="button" onclick="alert('Hola Mundo')">HolaMundo</button>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Datos académicos</legend>
+				<!-- RadioButtons, solomente puede haber uno seleccionado -->
+				<div>
+					<label for="ciclo"/>Selecciona ciclo</label>
+					</br>
+					<input type="radio" id="ciclo" name="ciclo" checked="checked"/>DAM
+					<input type="radio" id="ciclo" name="ciclo"/>DAW
+					<input type="radio" id="ciclo" name="ciclo"/>ASIR					
+				</div>
+				<!-- CheckBox: se puede marcar más de uno a la vez -->
+				<div>
+					<label for="eso"/>Forma de acceso</label>
+					</br>
+					<input type="checkbox" id="eso" name="eso" />ESO
+					<input type="checkbox" id="bach" name="bach" checked="checked"/>Bachillerato
+					<input type="checkbox" id="otros" name="otros"/>otros					
+				</div>
+				<div>
+				<!-- Listas desplegables: sololamente se puede una opción -->
+				<label for="ley">Selecciona Legislación del ciclo</label>
+				</br>
+			    <select id="ley" name="ley">
+					<option value="1">LOGSE</option>
+					<option value="2" select="selected">LOE</option>
+					<option value="3">LOMLOE</option>
+				</select>
+				</div>
+				
+				<!-- Listas de opción multiple: se peuden varias -->
+				<div>
+					<label for="beca">Becas</label>
+					</br>
+					<select id="beca" name="beca" multiple="multiple">
+					<!-- Si no ponemos value, el valor es lo que hay entre las etiquetas option -->
+						<option>Libros</option>
+						<option>Trasporte</option>
+						<option>Residencia</option>
+					</select>
+				</div>
+				<!-- SELECTOR DE FICHERO -->
+				<div>
+					<label for="fichero">Selecciona Ficheros</label>
+					<input type="file" id="fichero" name="fichero"/>
+				</div>
+				<!-- CAMPO DE TEXTO -->
+				<div>
+					<label for="comentario">Comentario</label>
+					</br>
+					<textarea id="comentario" name="comentario"
+						      placeholder="Escribe un comentario"
+							  cols="cols" rows="10"></textarea>
+					
+				</div>
+			</fieldset>
+			
+			</form>
+			<div>
+	</body>		<!-- ELEMENTOS MUTIMEDIA -->
+				<h1>Vídeo con IFRAME</h1>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/r-8AsljpxxI?si=1CD5T4qzlIdvTvXU" ç
+			title="YouTube video player" 
+			frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+			web-share" allowfullscreen></iframe>
+
+			<h1>PRESENTACIÓN DE GENIALLY</h1>
+			<div style="width: 50%;"><div style="position:
+			relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe title="Viaje a Londres"
+			frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 
+			100%; height: 100%;" src="https://view.genial.ly/63b2b7b6d309ae0012bf29dc"
+			type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes"
+			allownetworking="all"></iframe> </div>
+			</div>
+			
+			<!-- ETIQUETAS VIDEO Y AUDIO -->
+		<div>
+			<h1>VÍDEO</h1>
+			
+			<video src="https://raw.githubusercontent.com/rmmateosv/PMDM/master/Video.mp4" 
+			width="600"  looop="loop" controls="controls" preload="none" poster="img/chatbox.png" />	
+		</div>
+		<div>
+			<h1>AUDIO</h1>	
+				
+			<audio src="https://raw.githubusercontent.com/rmmateosv/PMDM/master/Jazz_In_Paris.mp3"
+			looop="loop" controls="controls"
+		</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>			

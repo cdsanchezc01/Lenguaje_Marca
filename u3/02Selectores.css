@@ -1,0 +1,69 @@
+/* SELECTORES*/
+/* SELECTOR UNIVERSAL: *
+Hacer que todos los elementos de la página se muestren con el tipo de letra Arial
+*/
+*{
+	font-family: Arial;
+}
+/*
+SELECTOR DE ELEMENTOS: Selecciona todos los elementos de la etiqueta definida.
+Se puede indicar más de un elemento separados por , 
+-Los títulos h1 deben salir en azul: Reglas de un elemento
+-Los títulos  h1 y el footer deben salir centrados: Regla de los elementos
+*/
+h1{
+	color:blue;
+}
+h1,footer{
+	text-align:center;
+}
+/* SELECTOR DE CLASE .
+Selecciona los elemento de la clase especifica
+Es posible combinararlo con el selector de elemento: elemento.clase
+
+-Todos los elementos de la clase resaltsar deben aparecer en negrita 
+-Losm párrafos de la clase resaltar deben aparecer subrayados 
+*/
+
+.resaltar{
+	font-weight:bold;
+}
+
+p.resaltar{
+	text-decoration:underline;
+}
+/*SELECTOR DE ID: #
+Selecciona el elemento (solamente debería haber1) cuyo id es el seleccionado
+
+-Mostrar los id pie en color silver
+*/
+#pie{
+	color:silver;
+}
+
+/*
+SELECTOR DE LIMITACIÓN: Es un espacio en blanco.Selecciona todos los elementos (hijos)
+que estén dentro de otro (padres). NO TIENEN POR QUÉ SER HIJOS DIRECTOS
+
+-El mapa del sitio debe salir en diferente color según el nivel de la viñeta. Rojo,Verde; azul
+*/
+ul.mapa{
+	color:red;
+}
+ul.mapa ul{
+	color:green;
+}
+
+ul.mapa ul ul{
+	color:blue;
+}
+
+/* SELECTOR DE ATRIBUTO: elemento[atributo] | [atributo="valor"]
+Se puede poner solamente que exista el atributo [atributo] o que además de cheque el valor [atributo="valor"]
+
+-Las viñetas que contengan atributo type y el valor round deben aparecer en negrita
+-Cualquier viñeta que contenga el atributo type debe aparecer en cursiva
+*/ 
+ul[type]{
+	font-style:italic;
+}
