@@ -61,9 +61,37 @@ ul.mapa ul ul{
 /* SELECTOR DE ATRIBUTO: elemento[atributo] | [atributo="valor"]
 Se puede poner solamente que exista el atributo [atributo] o que además de cheque el valor [atributo="valor"]
 
--Las viñetas que contengan atributo type y el valor round deben aparecer en negrita
 -Cualquier viñeta que contenga el atributo type debe aparecer en cursiva
+-Las viñetas que contengan atributo type y el valor round, deben aparecer en negrita
+-Los ul de la clase mapa y de tipo roud deben tener un borde negro de 1 pixel
 */ 
 ul[type]{
 	font-style:italic;
+}
+
+ul[type="round"]{
+	font-weight: bold;
+}
+
+ul[type="round"][class="mapa"]{
+	border:1px solid black;
+}
+/*
+SELECTOR JERÁRQUICO:
+etil > Hijos directos
+etil + Hermanos directos
+etil ~ Hermanos
+etil : first child ultimo hijo
+etil : last_child ultimo hijo 
+etil : empty elementos vacíos
+
+-Los li que sean de hijos directos de un ul de clase  mapa deben aparecer subrayados
+-Los h1 que sean los hermanos directos de a deben salir subrayados 
+*/
+ul.mapa>ul>li{
+	text-decoration:underline;
+}
+
+a+h1{
+	text-decoration:underline;
 }
