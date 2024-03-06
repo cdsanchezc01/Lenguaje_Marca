@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facturas>
+	<factura>
+		<cab numeroF="1">
+			<cliente>11111111A</cliente>
+			<fecha>2024/02/08</fecha>
+		</cab>
+		<detalle>
+			<linea id="1">
+				<articulo codigo="A01" nombre="Ruedas Michelin" cantidad="2" precio="80"/>
+			</linea>
+			<linea id="2">
+				<articulo codigo="A02" nombre="Liquido frenos" cantidad="1" precio="15,80"/>
+			</linea>
+		</detalle>
+	</factura>
+	<factura>
+		<cab numeroF="2">
+			<cliente>22222222A</cliente>
+			<fecha>2024/02/08</fecha>
+		</cab>
+		<detalle>
+			<linea id="1">
+				<articulo codigo="A01" nombre="Filtro aire" cantidad="1" precio="20,80"/>
+			</linea>
+			<linea id="2">
+				<articulo codigo="A02" nombre="Liquido Aticongelante" cantidad="1" precio="21"/>
+			</linea>
+		</detalle>
+	</factura>
+</facturas>
