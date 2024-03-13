@@ -1,0 +1,53 @@
+/* ANIMACIONES: Tranformacion, transicion, Animacion*/
+
+h1.noticia1{
+	border: 1px solid green;
+	width: 200px;
+}
+h1.noticia1:hover{
+	transform: scale(2,2); /*Aumenta el doble en X y en Y.*/
+}
+h1.noticia2{
+	border: 1px solid green;
+	width: 200px;
+}
+h1.noticia2:hover{
+	transform: rotate(90deg); /*rota 90º*/
+}
+h1.noticia3{
+	border: 1px solid green;
+	width: 200px;
+}
+h1.noticia3:hover{
+	transform: skew(10deg,10deg); /*Estira*/
+}
+h3{
+	border: 1px solid green;
+	width: 200px;
+}
+h3:hover{
+	transform:translate(10px,10px);
+}
+
+/* TRANSICIONES*/
+p.noticia1{
+	transition: font-size 3s linear 1s, background-color 3s ease 0s; 
+}
+p.noticia1:hover{
+	font-size: large;
+	background-color: orange;
+}
+
+
+/* ANIMACIONES*/
+@keyframes colorines{
+	0%{background-color: plum;color:pink;}
+	25%{background-color:seagreen;color:palegreeen;}
+	50%{background-color:salmon;color:seashell;}
+	75%{background-color:navy;color:skyblue;}
+	100%{background-color:peru;color:peachpuff;}
+}
+li{
+	animation: colorines 10s linear 0s infinite normal;
+}
+

@@ -1,0 +1,150 @@
+/* SELECTORES */
+/* 
+SELECTOR UNIVERSAL: * -> Afecta a todos los elementos del html
+Hacer que todos los elementos de la página se muestren con el tipo de letra Arial
+*/
+* {
+	font-family: Arial;
+}
+
+/*
+SELECTOR DE ELEMENTO: Selecciona todos los elementos de la etiqueta definida.
+Se puede indicar más de un elemento separados por ,
+
+- Los títulos h1 deben salir en azul: Reglas de un elemento
+- Los títulos h1 y el footer deben salir centrados: Regla de dos elementos
+*/
+h1{
+	color:blue;
+}
+h1,footer{
+	text-align:center;
+}
+/* SELECTOR DE CLASE: .
+Selecciona todos los elementos de la clase especificada
+Es posible combinarlo con el selector de elemento: elemento.clase
+
+- Todos los elementos de la clase resaltar deben aparecer en negrita
+- Los párrafos de la clase resaltar deben aparecer subrayados
+*/
+.resaltar{
+	font-weight:bold;
+}
+
+p.resaltar{
+	text-decoration: underline;
+}
+/*
+SELECTOR DE ID: #
+Selecciona el elemento(solament debería haber 1) cuyo id es el seleccionado
+
+- Mostrar los id pie en color silver
+*/
+#pie{
+	color:silver;
+}
+
+/*
+SELECTOR DE LIMITACIÓN: Es un espacio en blanco. Selecciona todos los elementos (hijos) 
+que estén dentro de otro (padre). NO TIENEN POR QUÉ SER HIJOS DIRECTOS
+
+- El mapa del sitio debe salir en diferente color según el nivel de la viñeta. Rojo,Verde,Azul
+*/
+ul.mapa{
+	color: red;
+}
+ul.mapa ul{
+	color:green;
+}
+ul.mapa ul ul{
+	color:blue;
+}
+
+/*
+SELECTOR DE ATRIBUTO: elemento[atributo]|elemento[atributo="valor"]
+Se puede poner solamente que exista el atributo [atributo] o 
+que además se cheque el valor [atributo="valor"]
+
+- Cualquier viñeta que contenga el atributo type debe aparecer en cursiva
+- Las viñetas que contega el atributo type y el valor round, deben aparecer en negrita
+- Los ul de la clase mapa y de tipo round deben tener un borde negro de 1 pixel
+*/
+ul[type]{
+	font-style: italic;
+}
+
+ul[type="round"]{
+	font-weight: bold;
+}
+ul[type="round"][class="mapa"]{
+	border: 1px solid black;
+	
+}
+/*
+SELECTOR JERÁRQUICO: 
+eti1>eti2 Hijos directos
+eti1+eti2 Hermanos DIRECTOS
+eti1~eti2 Hermanos
+eti1:first_child Primer hijo
+eti1:last_child Último hijo
+eti1:empty Elementos vacíos
+
+- Los li que sean hijos directos de un ul de clase mapa deben aparecer subrayados
+- Los p hermanos directo de h1 deben salir subrayado
+- El primer hijo de un ul que es hermano directo de un párrafo debe salir en rojo y el 
+- último en naranja
+*/
+ul.mapa>ul>li{
+	text-decoration:underline;
+}
+h1+p{
+	text-decoration:underline;
+}
+
+p+ul>li:first-child{
+	color:#FF0000;
+}
+p+ul>li:last-child{
+	color:orange;
+}
+
+/*
+Pseudoclases:
+- Al pasar por encima de los enlaces debe aparacer un fondo cyan
+- Los enlaces no vistados salgan en color Verde
+- Al pasar por encima de los enlaces no vistadosdebe aparacer un fondo olive
+- Los enlaces visitados en color rojo sin subrayado
+- La primera letra del primer párrafo hermano directo de un h1 debe salir a tamaño 20pt
+*/
+a:hover{
+	background-color: cyan;
+}
+a:link{
+	color:#00FF00;
+}
+a:link:hover{
+	background-color:olive;
+}
+a:visited{
+	color:#FF0000;
+	text-decoration: none;
+}
+h1+p:first-letter{
+	font-size: 20pt;
+}
+
+/*
+- Cuando un campo tiene el foco su color de fondo será amarillo
+- Campos deshabilitados con color de texto rojo 
+- Las etiquetas de los campos chequeados deben tener un color de fondo cyan
+*/
+form :focus{
+	background-color:#FFFF00;
+}
+form :disabled{
+	color:red;
+}
+
+form :checked+label{
+	background-color:cyan;
+}

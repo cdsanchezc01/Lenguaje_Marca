@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Recetas de Cocina</title>
+    <link rel="stylesheet" type="text/css" href="Recetas.css">
+</head>
+<body>
+    <header>
+        <h1>Mis Recetas de Cocina</h1>
+        <p>Bienvenido a mi colección de deliciosas recetas caseras.</p>
+    </header>
+
+    <nav>
+        <ul class="indice">
+            <li><a href="#entradas">Entradas</a></li>
+            <li><a href="#platos-principales">Platos Principales</a></li>
+            <li><a href="#postres">Postres</a></li>
+			<li><a href="#envio">Envia tu receta</a></li>
+        </ul>
+    </nav>
+
+    <section id="entradas" class="tipoPlato">
+        <h1>Entradas</h1>
+        <ul class="plato">
+            <li>
+                <h2>Ensalada César</h2>
+                <p>Una refrescante ensalada con aderezo casero.</p>
+                <p>Ingredientes:</p>
+                <ul>
+                    <li>Lechuga romana</li>
+                    <li>Crutones</li>
+                    <li>Parmesano rallado</li>
+                    <li>Pechuga de pollo a la parrilla</li>
+                </ul>
+                <p>Instrucciones de Realización:</p>
+                <ol>
+                    <li>Lava y corta la lechuga.</li>
+                    <li>Agrega los crutones y el parmesano.</li>
+                    <li>Cocina la pechuga de pollo y córtala en trozos.</li>
+                    <li>Mezcla todo y agrega el aderezo casero.</li>
+                </ol>
+            </li>
+            <li>
+                <h2>Tortilla Española</h2>
+                <p>Una deliciosa tortilla de patatas.</p>
+                <p>Ingredientes:</p>
+                <ul>
+                    <li>Patatas</li>
+                    <li>Huevos</li>
+                    <li>Cebolla</li>
+                    <li>Aceite de oliva</li>
+                </ul>
+                <p>Instrucciones de Realización:</p>
+                <ol>
+                    <li>Pela y corta las patatas y cebolla.</li>
+                    <li>Fríe las patatas y cebolla en aceite.</li>
+                    <li>Mezcla con los huevos batidos.</li>
+                    <li>Cocina la tortilla en una sartén.</li>
+                </ol>
+            </li>
+        </ul>
+    </section>
+
+    <section id="platos-principales" class="tipoPlato">
+        <h1>Platos Principales</h1>
+        <ul class="plato">
+            <li>
+                <h2>Lasaña de Carne</h2>
+                <p>Una lasaña sabrosa con carne y queso derretido.</p>
+                <p>Ingredientes:</p>
+                <ul>
+                    <li>Carne molida de res</li>
+                    <li>Pasta de lasaña</li>
+                    <li>Salsa de tomate</li>
+                    <li>Ricotta</li>
+                </ul>
+                <p>Instrucciones de Realización:</p>
+                <ol>
+                    <li>Cocina la carne y la pasta de lasaña.</li>
+                    <li>Capas alternas de carne, pasta y salsa de tomate.</li>
+                    <li>Termina con ricotta y queso.</li>
+                    <li>Gratina al horno hasta que esté dorado.</li>
+                </ol>
+            </li>
+            <li>
+                <h2>Pollo al Curry</h2>
+                <p>Pollo cocinado en una rica salsa de curry.</p>
+                <p>Ingredientes:</p>
+                <ul>
+                    <li>Pechugas de pollo</li>
+                    <li>Curry en polvo</li>
+                    <li>Leche de coco</li>
+                    <li>Verduras variadas</li>
+                </ul>
+                <p>Instrucciones de Realización:</p>
+                <ol>
+                    <li>Cocina las pechugas de pollo.</li>
+                    <li>Prepara una salsa de curry con leche de coco.</li>
+                    <li>Agrega las verduras y el pollo a la salsa.</li>
+                    <li>Sirve con arroz.</li>
+                </ol>
+            </li>
+        </ul>
+    </section>
+
+    <section id="postres" class="tipoPlato">
+        <h1>Postres</h1>
+        <ul class="plato">
+            <li>
+                <h2>Tarta de Manzana</h2>
+                <p>Una tarta casera con manzanas frescas y canela.</p>
+                <p>Ingredientes:</p>
+                <ul>
+                    <li>Manzanas</li>
+                    <li>Masa de tarta</li>
+                    <li>Canela y azúcar</li>
+                </ul>
+                <p>Instrucciones de Realización:</p>
+                <ol>
+                    <li>Pela y corta las manzanas.</li>
+                    <li>Coloca las manzanas en la masa de tarta.</li>
+                    <li>Espolvorea canela y azúcar.</li>
+                    <li>Hornea hasta que esté dorado.</li>
+                </ol>
+            </li>
+            <li>
+                <h2>Helado de Chocolate</h2>
+                <p>Helado cremoso de chocolate con virutas.</p>
+                <p>Ingredientes:</p>
+                <ul>
+                    <li>Crema de chocolate</li>
+                    <li>Leche</li>
+                    <li>Virutas de chocolate</li>
+                </ul>
+                <p>Instrucciones de Realización:</p>
+                <ol>
+                    <li>Mezcla la crema de chocolate y la leche.</li>
+                    <li>Refrigera y luego utiliza una máquina para hacer helado.</li>
+                    <li>Agrega virutas de chocolate al servir.</li>
+                </ol>
+            </li>
+        </ul>
+    </section>
+	<section id="envio" class="envio">
+		<header>
+			<h1>Formulario de Envío de Recetas</h1>
+			<p>Comparte tu receta deliciosa con nosotros.</p>
+		</header>
+
+		<form action="#" method="post">
+			<label for="nombre">Nombre de la Receta:</label><br/>
+			<input type="text" id="nombre" name="nombre" required="required" size="50">
+			<br/>
+			<label for="ingredientes">Ingredientes:</label><br/>
+			<textarea id="ingredientes" name="ingredientes" rows="4" cols="50" required="required"></textarea>
+			<br/>
+			<label for="instrucciones">Instrucciones:</label><br/>
+			<textarea id="instrucciones" name="instrucciones" rows="4" cols="50" required="required"></textarea>
+			<br/>
+			<input type="submit" value="Enviar Receta">
+		</form>
+	</section>
+
+    <footer>
+        <p id="autor">Derechos de autor © 2023 - Mis Recetas de Cocina</p>
+		<p>www.blogRecetas.com</p>
+    </footer>
+</body>
+</html>
