@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE partido[
 <!ELEMENT partido (fecha,hora,equipos,acciones)>
+<!ATTLIST partido xmlns CDATA #REQUIRED xmlns:accion CDATA #REQUIRED>
 <!ELEMENT fecha (#PCDATA)>
 <!ELEMENT hora (#PCDATA)>
 <!ELEMENT equipos (equipo,equipo)>
 <!ELEMENT equipo (jugadores)>
-<!ELEMENT equipo equipo ID #REQUIRED tipo (L|V) #REQUIRED>
+<!ATTLIST equipo equipo ID #REQUIRED tipo (L|V) #REQUIRED>
 <!ELEMENT jugadores (jugador+)>
 <!ELEMENT jugador EMPTY>
-<!ATTLIST jugador nombre ID #REQUIRED dorsal CDATA #REQUIRED posicion (portero|defensa|delantero|centro) #IMPLITED>
+<!ATTLIST jugador nombre ID #REQUIRED dorsal CDATA #REQUIRED posicion (portero|defensa|delantero|centro) #IMPLIED>
 <!ELEMENT acciones (accion*)> <!-- considereamos que puede haber un partido que no tenga accion-->
-<!ELEMENT accion (minuto, equipo, jugador)>
-<!ELEMENT accion tipo (GOL|TR|TA|FJ|Penalti) #REQUIRED>
+<!ELEMENT accion (minuto, accion:equipo, accion:jugador)>
+<!ATTLIST accion tipo (GOL|TR|TA|FJ|Penalti) #REQUIRED>
  <!ELEMENT minuto (#PCDATA)>
- <!ELEMENT equipo (#PCDATA)>
- <!ELEMENT jugador (#PCDATA)>
+ <!ELEMENT accion:equipo (#PCDATA)>
+ <!ELEMENT accion:jugador (#PCDATA)>
 ]
 >
+<partido xmlns="wwww.partidos.es"
+			xmlns:accion="www.partidos.es/accion">
 	<fecha>2024-01-01</fecha>
 	<hora>17:00</hora>
 	<equipos>
@@ -36,8 +39,8 @@
 	<acciones>
 		<accion tipo="G">
 			<minuto>6</minuto>
-			<equipo>RM</equipo>
-			<jugador>5</jugador>
+			<accion:equipo>RM</accion:equipo>
+			<accion:jugador>5</accion:jugador>
 		</accion>
 	</acciones>
 </partido>
