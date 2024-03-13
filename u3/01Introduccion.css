@@ -1,0 +1,27 @@
+/* Tipo de letra de la página (de todos los elementos) Courier New*/
+
+* {
+	font-family: Courier New;
+}
+
+/* Los párrafos deben salir en color naranja */
+p{
+	color:orange;
+}
+
+/* Los sitios favoritos deben salir en cursiva */
+ul{
+	font-style: italic;
+}
+
+/* Los elementos de la clase resaltar deben aparecer en negrita y subrayados */
+.resaltar{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* Herencia: Los elementos que están dentro de otros (hijos), heredan el css del padre 
+Todos los elementos del header deben tener un fondo beige*/
+header{
+	background-color: beige;
+}

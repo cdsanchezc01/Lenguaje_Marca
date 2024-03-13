@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE facturas[
+<!ELEMENT factura (cab, detalle, pagada?)>
+<!ELEMENT cab (cliente, fecha, (telefono|email)+)>
+<!ATTLIST cab numeroF ID #REQUIRED>
+<!ELEMENT cliente (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT articulo EMPTY>
+<!ATTLIST articulo codigo CDATA #REQUIRED nombre CDATA #REQUIRED cantidad  CDATA #REQUIRED precio CDATA #REQUIRED>
+<!ELEMENT linea (articulo)>
+<!ATTLIST linea id CDATA #REQUIRED>
+<!ELEMENT facturas (factura+)>
+<!ELEMENT detalle (linea+)>
+<!ELEMENT pagada EMPTY>
+]
+>
+<facturas>
+	<factura>
+		<cab numeroF="F1">
+				<cliente>11111111A</cliente>
+				<fecha>2024/02/08</fecha>
+				<!-- elemento telefono o email-->
+				<telefono>77777777</telefono>
+		</cab>
+		<detalle>
+			<linea id="1">
+				<articulo codigo="A01" nombre="Ruedas Michelin" cantidad="2" precio="80"/>
+			</linea>
+			<linea id="2">
+				<articulo codigo="A02" nombre="Liquido frenos" cantidad="1" precio="15,80"/>
+			</linea>
+		</detalle>
+		<pagada/>
+		<!-- 	ELEMENTO OPCIONAL, SOLO SI ESTA PAGADA-->
+	</factura>
+	<factura>
+		<cab numeroF="F2">
+			<cliente>22222222A</cliente>
+			<fecha>2024/02/08</fecha>
+			<email>paco@gmail.com</email>
+		</cab>
+		<detalle>
+			<linea id="1">
+				<articulo codigo="A01" nombre="Filtro aire" cantidad="1" precio="20,80"/>
+			</linea>
+			<linea id="2">
+				<articulo codigo="A02" nombre="Liquido Aticongelante" cantidad="1" precio="21"/>
+			</linea>
+		</detalle>
+	</factura>
+</facturas>

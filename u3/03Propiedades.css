@@ -1,0 +1,44 @@
+/* COLORES */
+body{
+	
+	background-color: lightgreen;
+}
+h1{
+	color: darksalmon;
+	color: #AAAAAA; /*Gris Claro*/
+	color: #101010;	/*Gris Oscuro*/
+	background-color: rgb(255,255,0); /*Amarillo*/
+	background-color: rgb(255,255,0,0.4); /*Amarillo transparente*/
+	background-color: rgb(255,255,0,0.7); /*Amarillo menos transparente*/
+}
+/* FUENTE */
+/* TAMAÑO */
+h1{
+	font-size: 14pt; /*Tamaño de letra 14 puntos*/
+	font-size: 200%; /*Tamaño de letra el doble de 14 pt => 28pt*/
+	font-size: 10px; /*Tamaño de letra en píxeles*/
+	font-size: xx-large; /*Tamaño de absoluto*/
+	font-size: smaller; /*Tamaño de letra relativo al padre*/
+}
+/* TIPO DE LETRA */
+h1{
+	font-family:"Old English Text MT",Calibri;
+}
+/* VAIRANTES */
+label{
+	font-variant: small-caps;
+}
+
+/* INTERLIENADO */
+ul{
+	line-height: 2;
+}
+
+/* SHORTHAD font 
+ Permite modificar todas las propiedades de fuente en una 
+	sola regla . Es importante el orden.
+	Solamente es obligatorio indicar el tamaño y el tipo de fuente
+*/
+th{
+	font: italic  small-caps 16pt/2 Arial;
+}

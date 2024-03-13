@@ -1,0 +1,26 @@
+/* PROPPIEDADES DE FONDO */
+
+body{
+	/* Color de fondo a body*/
+	background-color: red;
+}
+.noticia1{
+	/* Color de fondo a body */
+	background-color: lightgreen;
+}
+.noticia2{
+	height: 900px;
+	background-color: cyan;
+	background-image: url('img/chatbox.png');
+	background-repeat: no-repeat;  /*Para que no se repita*/
+	/* Fijar imagen*/
+	background-attachement: fixed;
+	/* Posicionar abajo a la derecha*/
+	background-position: right bottom;
+	/* Posicionar centrado vertical y horizontal */
+	background-position: center;
+}
+p.noticia3{
+	/* PROPIEDAD SHORTHAND*/
+	background: silver url('img/chatbox.png') repeat-y scroll top center;
+}

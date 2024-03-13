@@ -1,0 +1,15 @@
+<!ELEMENT factura (cab, detalle, pagada?)>
+<!ELEMENT cab (cliente, fecha, (telefono | email))>
+<!ATTLIST cab numeroF id #REQUIRED>
+<!ELEMENT cliente (#PCDATA)>
+<!ELEMENT fecha #PCDATA>
+<!ELEMENT articulo EMPTY>
+<!ATTLIST articulo codigo CDATA #REQUIRED nombre CDATA #REQUIRED cantidad  CDATA #REQUIRED precio CDATA #REQUIRED>
+<!ELEMENT linea (articulo)>
+<!ATTLIST linea id CDATA #REQUIRED>
+<!ELEMENT facturas (factura+)>
+<!ELEMENT detalle (linea+)>
+<!ELEMENT pagada EMPTY>
+
+
+

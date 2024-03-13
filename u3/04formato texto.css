@@ -1,0 +1,95 @@
+/* PROPIEDADES DE FORMATO DE TEXTO */
+
+p.noticia1{
+	/* ESPACIO ENTRE PALABRAS */
+	word-spacing: 20px;
+	/* Alineación horizontal derecha */
+	text-align:right;
+}
+
+p.noticia2{
+	/* ESPACIO ENTRE LETRAS */
+	letter-spacing: 5px;
+	/* Alineacion horizontal centrada */
+	text-align: center;
+}
+
+p.noticia3{
+	
+	/* Alineacion horizontal justificada */
+	text-align: justify;
+	/*  Sangría de 1ª línea de 30 px */
+	text-ident: 30px;
+}
+
+
+h1:first-child{
+	/* Subrayado por la parte superior en azul y punteado*/
+	/* Tipo de color estilo grosor */
+	text-decoration: overline blue dotted;
+	/* Letras en mayusculas */
+	text-transform: uppercase;
+	
+	/* sombra */
+	text-shadow: 2px 2px 10px red; /*si pones en negativo se sube -2*/
+	
+}
+
+h1.noticia2{
+	/*Tachado y odulado */
+	text-decoration: line-through green wavy 5px; 
+	/* Letras minusculas */
+	text-transform: lowercase;
+}
+
+h1.noticia3{
+	/* Subrayado línea discontinua*/
+	text-decoration: underline dashed 3px;
+	/* PROPIEDADES DE FORMATO DE TEXTO */
+
+p.noticia1{
+	/* ESPACIO ENTRE PALABRAS */
+	word-spacing: 20px;
+	/* Alineación horizontal derecha */
+	text-align:right;
+}
+
+p.noticia2{
+	/* ESPACIO ENTRE LETRAS */
+	letter-spacing: 5px;
+	/* Alineación horizontal centrada */
+	text-align:center;
+}
+p.noticia3{
+	/* Alineación horizontal justificada */
+	text-align:justify;
+	/* Sangría de 1ª línea de 30 px */
+	text-indent: 30px;
+}
+
+h1:first-child{
+	/* Subrayado por la parte superior en azul y punteado*/
+	/* tipo color estilo grosor*/
+	text-decoration: overline blue dotted;
+	/* Letras mayúsculas */
+	text-transform: uppercase;
+	
+	/*Sombra*/
+	text-shadow: -2px -2px 10px red;
+}
+
+h1.noticia2{
+	/* Tachado verde y ondulado*/
+	text-decoration: line-through green wavy 5px;
+	/* Letras minúsculas */
+	text-transform: lowercase;
+}
+
+h1.noticia3{
+	/* Subrayado línea discontinua*/
+	text-decoration: underline dashed 3px;
+	/* Letras Tipo Título */
+	text-transform: capitalize;
+}
+
+
