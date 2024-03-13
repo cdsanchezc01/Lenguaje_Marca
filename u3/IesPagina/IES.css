@@ -1,0 +1,118 @@
+header, footer{
+    text-align: center;
+    background-color: gray;
+    color: white;
+}
+li{
+    list-style-type: none;  /*Quitamos punto*/
+}
+nav li{
+    display: inline-block; /*Ponemos todo en la misma linea*/
+}
+a{
+    text-decoration: none; /*Quitamos el subrayado*/
+}
+nav a{
+        color: #00AEAE;
+        background-color: white;
+        border: 1px solid;
+        border-radius: 10px; /*Borde-radio/redondo*/
+        padding: 10px; /*Relleno*/
+}
+nav a:hover{ /*Se activa al pasar por emcima*/
+	color:white;
+	background-color:#00AEAE;	
+	border:1px solid white;	
+}
+.izquierda, .derecha{
+    background-color:#CAFFFF;
+	width: 200px;
+	display:flex;
+	flex-direction:column; /*Direccion del eje principal*/
+	align-items: center; /*Permite alienear a lo largo del eje tranversal*/
+}
+
+.contenido{
+	overflow:hidden; /**/
+	height:400px;
+	flex-grow:1;/*Valor númerico que especifica cuanto va a crecer proporcionalmente  */
+}
+.contenido article{
+	overflow-y:scroll; /*Contenido es mas alto que el contemedor*/
+	height:400px;
+}
+@keyframes proyectos{/* Definimos la animacion proporcioanlmete en %*/
+	0% {background-color:#00AEAE;color:#CAFFFF;}
+	50% {background-color:#CAFFFF;color:#00AEAE;}
+	100% {background-color:#00AEAE;color:#CAFFFF;}
+}
+.izquierda a{
+	background-color:#00AEAE;
+	color:#CAFFFF;
+	padding: 10px;
+	margin-left:-40px; /*Margen izquierdo*/
+	display: block;
+	margin-bottom:5px; /*Margen inferior*/
+	animation: proyectos 10s linear 0s infinite normal;	 /*Defimos la duracion de la animacio*/
+}
+.derecha img{ 
+	display:block;
+	margin: 10px;
+	width:50px;
+}
+.derecha img{
+	transition: width 2s linear 0s; /*Transion: ancho 2s lineal 0s*/
+}
+
+.derecha img:hover{
+	width:100px; 
+}
+
+.contenido h2{
+	color:#00AEAE;
+	text-shadow: 3px 3px 5px gray;
+}
+
+#inicio h3{
+	border:1px dashed #00AEAE;
+	box-shadow: 3px 3px 5px #00AEAE;
+	padding:10px;
+	border-radius:5px;
+}
+
+#cursos p{	
+	border-radius:200px;
+	display: inline-block;
+	width: 100px;
+	padding:50px;
+	/* 4 quitar text-align:center; */
+	background-image:conic-gradient(#CAFFFF, white);
+	transition: transform 2s linear 0s;
+}
+#cursos p:hover{	/* # para los ID y el :hover es para que se active al pasar el raton*/	
+	transform:rotate(90deg);	/* Trasnfromacion: rotamos 90segundos*/
+}
+body{
+	display:flex;
+	flex-direction:column;
+}
+header{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+.principal{
+	display:flex;
+	flex-direction:row;
+}
+
+.izquierda aside, .derecha aside{  
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+}
+footer{
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+}

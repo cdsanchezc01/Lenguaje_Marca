@@ -1,0 +1,43 @@
+/* MODELO DE  CAJAS*/
+.noticia1{
+	margin-right:100px;
+	background-color: lightgreen;
+}
+
+.noticia3{
+	margin:50px auto;
+	background-color: lightblue;
+	max-width:300px; /*cae en el examen*/
+}
+
+.noticia2{
+	margin:10px 5px 50px 300px;
+	background: lightpink;
+}
+h1.noticia1{
+	border: 2px inside blue;
+	border-radius: 10px;ç
+	padding-left: 20px;
+}
+h1.noticia2{
+	border-top: 5px dotted red;
+	border-right: 5px solid green;
+	border-bottom: 5px dashed blue;
+	border-left: 5px double orange;
+	border-top-left-radius:60px;
+	border-bottom-left-radius:30px ;
+	border-top-right-radius:50px;
+	border-bottom-right-radius:50px;
+}
+
+h1.noticia3{
+	width: 100px;
+	height:100px;
+	border-radius:600px;
+	padding:150px;
+}
+p.noticia1{
+	padding:30px;
+	text-align: justify;
+}
+
