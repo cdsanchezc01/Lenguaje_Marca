@@ -1,0 +1,56 @@
+#contenedor h1{
+	text-align: center;
+	color:blue
+}
+
+a{
+    text-decoration: none;
+}
+nav a{
+        color: blue;
+        background-color: white;
+        border: 1px solid;
+        border-radius: 10px; 
+        padding: 10px; 
+}
+nav a:hover{ 
+	color:white;
+	background-color:blue;	
+	border:1px solid white;	
+}
+.modulo{
+	color:blue;
+	text-decoration:underline;
+}
+.fecha{
+	color:green;
+}
+.descripcion{
+	color:red;
+}
+.nota{
+	color:green;
+	background-color:#8bc34a;
+}
+.contenido{
+	border:1px dashed blue;
+	box-shadow: -0px -3px 5px blue;
+	padding:10px;
+	border-radius:1px;
+}
+
+body{ 
+	display:grid;
+	grid-template-columns: 20% auto 20%; 
+	grid-template-rows: auto auto auto; 
+	grid-template-areas: "cab cab cab" "cat ppal promo" "pie pie pie"; 
+}
+#tareas{ /*Luego aqui pues terminar de gstionar */
+	grid-area:cat;
+}
+#notas{
+	grid-area:ppal;
+}
+#promo{
+	grid-area:promo;
+}
