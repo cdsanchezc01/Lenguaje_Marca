@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jornada xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="liga.xsd">
+	<numero>Primera</numero>
+	<codigos>
+		<codigo>j01-RM-Barcelona</codigo>
+		<codigo>j01-ALTM-ALTB</codigo>
+	</codigos>
+	<partidos>
+		<partido codigo="j01-RM-Barcelona" arbitros="Pepe Ana Juan Luisa">
+			<fecha>2024-01-01</fecha>
+			<hora>17:00:00</hora>
+			<estadio codigo="BER">Bernabéu</estadio>
+			<equipos>
+				<equipo equipo="RM" tipo="L">
+					<jugadores>
+						<jugador nombre="Bellinghann" dorsal="5" posicion="centro"/>
+						<jugador nombre="Vini" dorsal="7" posicion="delantero"/>
+					</jugadores>
+					<entrenador>Ancelotti</entrenador>
+				</equipo>
+				<equipo equipo="Barcelona" tipo="V"> 
+					<jugadores>
+						<jugador nombre="Gavi" dorsal="6" posicion="centro"/>
+						<jugador nombre="pedri" dorsal="8" posicion="centro"/>
+					</jugadores>
+					<segundo>Óscar Hernández</segundo>
+				</equipo>
+			</equipos>
+			<acciones>
+				<accion tipo="Gol">
+					<minuto>8</minuto>
+					<equipoA>RM</equipoA>
+					<jugadorA>5</jugadorA>
+				</accion>
+			</acciones>
+			<resultado>
+				<finalizacion fecha="2024-01-01" hora="19" minuto="45"/>
+				<golesL>1</golesL>
+				<golesV>0</golesV>
+				<ganador>L</ganador>
+			</resultado>
+		</partido>
+		<partido  codigo="j01-ALTM-ALTB"  arbitros="María Óscar Mario Lola">
+			<fecha>2024-01-01</fecha>
+			<hora>17:00:00</hora>
+			<equipos>
+				<equipo equipo="ALTM" tipo="L">
+					<jugadores>
+						<jugador nombre="Morata" dorsal="15" posicion="centro"/>
+						<jugador nombre="Griezman" dorsal="17" posicion="delantero"/>
+					</jugadores>
+					<entrenador>Simeone</entrenador>
+				</equipo>
+				<equipo equipo="ALTB" tipo="V"> 
+					<jugadores>
+						<jugador nombre="I.William" dorsal="26" posicion="centro"/>
+						<jugador nombre="N.William" dorsal="28" posicion="centro"/>
+					</jugadores>
+					<entrenador>Valverde</entrenador>
+				</equipo>
+			</equipos>
+			<acciones>
+				<accion tipo="Gol">
+					<jugadorA>28</jugadorA>
+					<equipoA>ALTB</equipoA>
+					<minuto>18</minuto>
+				</accion>
+			</acciones>
+			<resultado>
+				<finalizacion fecha="2024-01-01" hora="09" minuto="30"/>
+				<golesL>0</golesL>				
+				<golesV>1</golesV>
+				<ganador>V</ganador>
+			</resultado>
+		</partido>	
+	</partidos>
+
+</jornada>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!-- Definicion GLOBAL de un elemento raiz -->
+	<xs:element name="jornada">
+	<!-- Elemento complejo compuesto -->
+		<xs:complexType>
+			<!-- Definicion de secueencia de elementos -->
+			<xs:sequence>
+				<!-- Lo definimos de forma local -->
+				<xs:element name="numero" type="xs:string"/>
+				<!-- Codigos y partidos lo definimos de forma GLOBAL por legibilidad del codigo o posible
+				reutilizacion-->
+				<xs:element name="codigos""/>
+				<xs:element name="partidos"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- Definicion GLOBAL de codigos -->
+	<xs:element name="codigos">
+		<xs:complexType>
+			<xs:sequence>
+				<!-- Definicion Local de codigo-->
+				<xs:element name="codigo" type="xs:IDREF" minOccurs="1" maxOccurs=""/>
+			</xs:sequence>
+		</xs:complexType>	
+	</xs:element>
+</xs:schema>
