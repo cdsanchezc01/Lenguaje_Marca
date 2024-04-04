@@ -1,27 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-	<!-- Definicion GLOBAL de un elemento raiz -->
+	<!-- Definición GLOBAL de elemento raíz -->
 	<xs:element name="jornada">
-	<!-- Elemento complejo compuesto -->
+		<!-- ELEMENTO COMPLEJO COMPUESTO -->
 		<xs:complexType>
-			<!-- Definicion de secueencia de elementos -->
+			<!-- DEFINICIÓN DE SECUENCIA DE ELEMENTOS -->
 			<xs:sequence>
-				<!-- Lo definimos de forma local -->
+				<!-- LO DEFINIMOS DE FORMA LOCAL -->
 				<xs:element name="numero" type="xs:string"/>
-				<!-- Codigos y partidos lo definimos de forma GLOBAL por legibilidad del codigo o posible
-				reutilizacion-->
-				<xs:element name="codigos""/>
-				<xs:element name="partidos"/>
+				<!-- Códigos y partidos los definimos de forma GLOBAL
+				por legiilidad del código o posible reutilización -->
+				<xs:element ref="codigos"/>
+				<xs:element ref="partidos"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	<!-- Definicion GLOBAL de codigos -->
+	<!-- Definición GLOBAL de códigos -->
 	<xs:element name="codigos">
 		<xs:complexType>
 			<xs:sequence>
-				<!-- Definicion Local de codigo-->
-				<xs:element name="codigo" type="xs:IDREF" minOccurs="1" maxOccurs=""/>
+				<!-- Definición LOCAL de código -->
+				<xs:element name="codigo" type="xs:IDREF" 
+				minOccurs="1" maxOccurs="unbounded"/>
 			</xs:sequence>
-		</xs:complexType>	
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="partidos">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="partido" minOccurs="1" 
+				maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="fecha" type="xs:date"/>
+							<xs:element name="hora" type="xs:time"/>
+							<xs:element ref="estadio" minOccurs="0"/>
+							<xs:element ref="equipos"/>
+							<xs:element ref="acciones"/>
+							<xs:element ref="resultado"/>							
+						</xs:sequence>
+						<xs:attribute name="codigo" type="xs:ID" use="required"/>
+						<xs:attribute name="arbitros" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="estadio">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="codigo" type="xs:string" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="equipos">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="equipo" minOccurs="2" maxOccurs="2">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="jugadores"/>
+							<xs:choice>
+								<xs:element name="entrenador" type="xs:string"/>
+								<xs:element name="segundo" type="xs:string"/>
+							</xs:choice>
+						</xs:sequence>
+						<xs:attribute name="equipo" type="xs:ID" use="required"/>
+						<xs:attribute name="tipo" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="jugadores">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="jugador" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="nombre" type="xs:string" use="required"/>
+						<xs:attribute name="dorsal" type="xs:unsignedInt" use="required"/>
+						<xs:attribute name="posicion" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="acciones">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="accion" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="minuto" type="xs:int"/>
+							<xs:element name="equipoA" type="xs:string"/>
+							<xs:element name="jugadorA" type="xs:string"/>
+						</xs:all>
+						<xs:attribute name="tipo" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="resultado">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="finalizacion">
+					<xs:complexType>
+						<xs:attribute name="fecha" type="xs:date" use="required"/>
+						<xs:attribute name="hora" type="xs:unsignedInt" use="required"/>
+						<xs:attribute name="minuto" type="xs:unsignedInt" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="golesL" type="xs:int"/>
+				<xs:element name="golesV" type="xs:int"/>
+				<xs:element name="ganador" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
 	</xs:element>
 </xs:schema>
