@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<expediente xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:noNamespaceSchemaLocation="expediente.xsd"> 
+	<nombre>Juan</nombre>
+	<apellidos>García Pérez</apellidos>
+	<fecha_nacimiento>1998-05-15</fecha_nacimiento>
+	<matriculas>
+		<matricula ciclo="DAM" titula="false">
+		  <curso curso="1">
+			<inicio>2022-09-01</inicio>
+			<asignatura nombre="PRO" nota="8"/>
+			<asignatura nombre="BD" nota="7"/>
+			<asignatura nombre="LMSGI" nota="7"/>
+			<asignatura nombre="SI" nota="7"/>
+			<asignatura nombre="ED" nota="7"/>
+			<asignatura nombre="FOL" nota="5" convalidada="true"/>
+			<fin>2023-06-30</fin>
+		  </curso>
+		  <curso curso="2">
+			<inicio>2023-09-01</inicio>
+			<asignatura nombre="EIE" nota="5" convalidada="true"/>
+		  </curso>
+		</matricula>
+		<matricula ciclo="ASIR" titula="true">
+		  <curso curso="1">
+			<inicio>2019-09-01</inicio>
+			<asignatura nombre="ISO" nota="10"/>
+			<asignatura nombre="PAR" nota="7"/>
+			<asignatura nombre="LMSGI" nota="7"/>
+			<asignatura nombre="FH" nota="7"/>
+			<asignatura nombre="GBD" nota="7"/>
+			<asignatura nombre="FOL" nota="7"/>
+			<fin>2020-06-30</fin>
+		  </curso>
+		  <curso curso="2">
+			<inicio>2020-09-01</inicio>
+			<asignatura nombre="ASO" nota="10"/>
+			<asignatura nombre="SAD" nota="10"/>
+			<asignatura nombre="SRI" nota="10"/>
+			<asignatura nombre="IAW" nota="10"/>
+			<asignatura nombre="ASGBD" nota="10"/>
+			<asignatura nombre="FCT" nota="10"/>
+			<asignatura nombre="EIE" nota="10"/>
+			<fin>2021-06-30</fin>
+		  </curso>
+		</matricula>
+	</matriculas>
+	<contacto>
+		<telefono numero="611223344"/>
+	</contacto>
+</expediente>

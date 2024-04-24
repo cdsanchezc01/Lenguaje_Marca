@@ -50,7 +50,7 @@
 	<xs:element name="estadio">
 		<xs:complexType>
 			<xs:simpleContent>
-				<xs:extension base="xs:string">
+				<xs:extension base="miTexto20">
 					<xs:attribute name="codigo" type="xs:string" use="required"/>
 				</xs:extension>
 			</xs:simpleContent>
@@ -110,14 +110,43 @@
 				<xs:element name="finalizacion">
 					<xs:complexType>
 						<xs:attribute name="fecha" type="xs:date" use="required"/>
-						<xs:attribute name="hora" type="xs:unsignedInt" use="required"/>
-						<xs:attribute name="minuto" type="xs:unsignedInt" use="required"/>
+						<xs:attribute name="hora" type="tipoHora" use="required"/>
+						<xs:attribute name="minuto" type="tipoMin" use="required"/>
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="golesL" type="xs:int"/>
 				<xs:element name="golesV" type="xs:int"/>
-				<xs:element name="ganador" type="xs:string"/>
+				<xs:element name="ganador" type="tipoGanador"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-</xs:schema>
+	<!-- Definimos un tipo de String que tenga minimo 5 caracteres y maximo 20 -->
+	<xs:simpleType name="miTexto20">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+			<xs:minLength value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoHora">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:minInclusive value="0"/>
+			<xs:maxExclusive value="24"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoMin">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="59"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoGanador">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="L"/>
+			<xs:enumeration value="V"/>
+			<xs:enumeration value="E"/>
+			<xs:enumeration value="l"/>
+			<xs:enumeration value="v"/>
+			<xs:enumeration value="e"/>
+		</xs:restriction>
+	</xs:simpleType>  
+</xs:schema>   

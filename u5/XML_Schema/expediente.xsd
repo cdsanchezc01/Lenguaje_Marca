@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="expediente">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="nombre" type="xs:String"/>
+				<xs:element name="apellidos" type="xs:String"/>
+				<xs:element name="fecha_nacimiento" type="xs:date"/>
+				<xs:element ref="matricula"/>
+				<xs:element name="contacto" type="tipoContacto"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="matricula">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="matricula" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="curso" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="inicio" type="xs:date"/>
+									<xs:element name="asignatura" minOccurs="0" maxOccurs="unbounded" type="tipoAsignatura"/>
+									<xs:element name="fin" type="xs:date" minOccurs="0"/>
+								</xs:sequence>
+								<xs:attribute name="curso" type="xs:int" use="required"/>
+							</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="ciclo" type="xs:String" use="required"/>
+						<xs:attribute name="titula" type="xs:boolean" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="tipoAsignatura">
+		<xs:attribute name="nombre" type="xs:String" use="required"/>
+		<xs:attribute name="nota" type="xs:int" use="required"/>
+		<xs:attribute name="convalidada" type="xs:boolean" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="tipoContacto">
+		<xs:choice>
+			<xs:element name="telefono">
+				<xs:complexType>
+					<xs:attribute name="numero" type="xs:String" use="required"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="email">
+				<xs:complexType>
+					<xs:attribute name="email" type="xs:String" use="required"/>
+				</xs:complexType>
+			</xs:element>		
+		</xs:choice>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,16 @@
+<expediente xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:noNamespaceSchemaLocation="expediente.xsd">>
+	<matriculas>
+		<matricula ciclo="DAM" titula="false">
+		  <curso curso="1">
+			<inicio>2022-09-01</inicio>
+		  </curso>
+		</matricula>
+	</matriculas>
+	<contacto>
+		<email email="anals2000@gmail.com"/>
+	</contacto>
+	<nombre>Ana</nombre>
+	<apellidos>López Sánchez</apellidos>
+	<fecha_nacimiento>2000-10-11</fecha_nacimiento>
+</expediente>
