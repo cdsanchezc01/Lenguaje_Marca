@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <expediente xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-		xsi:noNamespaceSchemaLocation="expediente.xsd"> 
+		xsi:noNamespaceSchemaLocation="expediente.xsd">
+		
 	<nombre>Juan</nombre>
 	<apellidos>García Pérez</apellidos>
 	<fecha_nacimiento>1998-05-15</fecha_nacimiento>

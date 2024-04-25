@@ -8,6 +8,8 @@
 	</codigos>
 	<partidos>
 		<partido codigo="j01-RM-Barcelona" arbitros="Pepe Ana Juan Luisa">
+		
+		
 			<fecha>2024-01-01</fecha>
 			<hora>17:00:00</hora>
 			<estadio codigo="BER">Bernabéu</estadio>
