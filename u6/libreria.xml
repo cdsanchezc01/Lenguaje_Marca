@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="libreria.xsl"?>
+<bookstore>
+	<book>
+		<title lang="en" isbn="123321">Harry Potter</title>
+		<price>29.99</price>
+		<portada>libro1.png</portada>
+	</book>
+	<book>
+		<title lang="en" isbn="564324">Learning XML</title>
+		<price>39.95</price>
+		<portada>libro2.png</portada>
+	</book>
+	<book>
+		<title lang="en" isbn="998877">Learning MySQL</title>
+		<price>19.95</price>
+		<portada>libro3.png</portada>
+	</book>
+	<book>
+		<title lang="es" isbn="887766">Aprendiendo Java</title>
+		<price>49.95</price>
+		<portada>libro4.png</portada>
+	</book>
+</bookstore> 
+
