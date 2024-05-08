@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<hotelesExtremadura>
+    <provincia  nombre="Cáceres">
+        <localidad nombre="Navalmoral de la Mata" numHabitantes="20000">
+              <alojamiento nombre="Los granados"  categoria="Hotel">
+                  <datosContacto>
+                      <ubicacion>Antigua Crtra. N-V, km 181</ubicacion>
+                      <telefono> +34(927)123456 </telefono>
+                      <eMail>info@hotelosgranados.es</eMail>
+                  </datosContacto>
+                  <precioMedio>55</precioMedio>
+                  <numEstrellas>3</numEstrellas>
+                  <valoracionMediaClientes>9.2</valoracionMediaClientes>
+                  <servicios>
+                      <servicio>Aire acondicionado</servicio>
+                      <servicio>Wifi</servicio>                                                                  
+                      <servicio>Restaurante</servicio>
+                      <servicio>Parking</servicio>                                            
+                  </servicios>
+              </alojamiento>
+
+              <alojamiento nombre="La Bamba" categoria="Hostal">
+                  <datosContacto>
+                      <ubicacion>Carretera N-V km. 179</ubicacion>
+                      <telefono> +34(927)234567 </telefono>
+                      <eMail>info@hostalLaBamba.es</eMail>
+                  </datosContacto>          
+                  <precioMedio>50</precioMedio>
+                  <valoracionMediaClientes>8.8</valoracionMediaClientes>
+                  <servicios>
+                      <servicio>Aire acondicionado</servicio>
+                      <servicio>Wifi</servicio>
+                  </servicios>
+              </alojamiento>
+        </localidad>
+        
+        <localidad nombre="Belvís de Monroy"  numHabitantes="730">        
+              <alojamiento nombre="La cerca del alcornoque" categoria="Casa rural">
+                  <datosContacto>
+                      <ubicacion>Camino de la Jarilla s/n</ubicacion>
+                      <telefono> +34(927)345678 </telefono>
+                      <eMail>info@LaCercaDelAlconoque.es</eMail>
+                  </datosContacto>
+                  <precioMedio>77</precioMedio>
+                  <numEstrellas>4</numEstrellas>
+                  <valoracionMediaClientes>8.9</valoracionMediaClientes>                  
+                  <servicios>
+                      <servicio>Aire acondicionado</servicio>
+                      <servicio>Wifi</servicio>                                                                  
+                      <servicio>Restaurante</servicio>
+                      <servicio>Piscina</servicio>                                            
+                      <servicio>Spa</servicio>                                                                  
+                  </servicios>
+              </alojamiento>
+        </localidad>
+        
+        <localidad nombre="Talayuela"  numHabitantes="7345">        
+              <alojamiento nombre="Valle de Gredos" categoria="Hotel">
+                  <datosContacto>
+                      <ubicacion>Carretera de Santa María, Km 1,2</ubicacion>
+                      <telefono> +34(927)456789 </telefono>
+                      <eMail>info@ValleDeGredos.es</eMail>
+                  </datosContacto>
+                  <precioMedio>85</precioMedio>
+                  <numEstrellas>4</numEstrellas>
+                  <valoracionMediaClientes>8.7</valoracionMediaClientes>                  
+                  <servicios>
+                      <servicio>Aire acondicionado</servicio>
+                      <servicio>Wifi</servicio>                                                                  
+                      <servicio>Restaurante</servicio>
+                      <servicio>Piscina</servicio>                                            
+                      <servicio>Spa</servicio>                                                                  
+                  </servicios>                  
+              </alojamiento>
+        </localidad>
+        
+
+        <localidad nombre="Losar de la Vera"  numHabitantes="2800">        
+              <alojamiento nombre="La covacha" categoria="Casa rural">
+                  <datosContacto>
+                      <ubicacion>Camino de los Martires 1</ubicacion>
+                      <telefono> +34(927)787675 </telefono>
+                      <eMail>info@LaCovacha.es</eMail>
+                  </datosContacto>
+                  <precioMedio>75</precioMedio>
+                  <numEstrellas>4</numEstrellas>
+                  <valoracionMediaClientes>9.3</valoracionMediaClientes>                  
+                  <servicios>
+                      <servicio>Aire acondicionado</servicio>
+                      <servicio>Wifi</servicio>                                                                  
+                      <servicio>Piscina</servicio>                                            
+                  </servicios>                  
+              </alojamiento>
+        </localidad>
+
+        <localidad nombre="Jarandilla de la Vera"  numHabitantes="2900">        
+              <alojamiento nombre="La posada de los sentidos" categoria="Casa rural">
+                  <datosContacto>
+                      <ubicacion>Calle Machín S/N</ubicacion>
+                      <telefono> +34(927)467899 </telefono>
+                      <eMail>info@laposadadelossentidos.es</eMail>
+                  </datosContacto>
+                  <precioMedio>77</precioMedio>
+                  <numEstrellas>4</numEstrellas>
+                  <valoracionMediaClientes>9</valoracionMediaClientes>                  
+                  <servicios>
+                      <servicio>Aire acondicionado</servicio>
+                      <servicio>Wifi</servicio>                                                                  
+                      <servicio>Piscina</servicio>                                            
+                  </servicios>                  
+              </alojamiento>
+        </localidad>
+        
+ </provincia>
+  
+  <provincia  nombre="Badajoz">
+          <localidad nombre="Mérida"  numHabitantes="58000">
+              <alojamiento nombre="Tryp Medea" categoria="Hotel">
+                  <datosContacto>
+                      <ubicacion>Avenida de Portugal, s/n</ubicacion>
+                      <telefono> +34(927)444444 </telefono>
+                      <eMail>info@trypmedea.es</eMail>
+                  </datosContacto>
+                  <precioMedio>92</precioMedio>
+                  <numEstrellas>4</numEstrellas>
+                  <valoracionMediaClientes>8.8</valoracionMediaClientes>
+                  <servicios>
+                      <servicio>Aire acondicionado</servicio>
+                      <servicio>Wifi</servicio>                                                                  
+                      <servicio>Restaurante</servicio>
+                      <servicio>Piscina</servicio>                                            
+                      <servicio>Gimnasio</servicio>                                                                  
+                  </servicios>                  
+              </alojamiento>
+          </localidad>
+  </provincia>
+
+</hotelesExtremadura>

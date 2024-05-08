@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redGasolineras>
+  <comunidad nombre="Extremadura">
+    <gasolinera id="gas1" nombre="El Berrocal">
+      <localidad provincia="Cáceres"> Navalmoral de la Mata </localidad>
+      <compañia> Repsol </compañia>
+      <carretera puntoKilometrico="184"> A-5 </carretera>
+      <telefono> 927888888</telefono>
+      <servicios>
+        <servicio> Restaurante </servicio>
+        <servicio> Lavado </servicio>
+        <servicio> Parking camiones </servicio>
+      </servicios>
+    </gasolinera>
+    <gasolinera id="gas2">
+      <localidad provincia="Cáceres"> Cáceres </localidad>
+      <compañia> Repsol </compañia>
+      <carretera puntoKilometrico="145"> N-521 </carretera>
+      <telefono> 927216861 </telefono>
+    </gasolinera>
+    <gasolinera id="gas3">
+      <localidad provincia="Cáceres"> Cáceres </localidad>
+      <compañia> Repsol </compañia>
+      <carretera puntoKilometrico="548"> N-630 </carretera>
+      <telefono> 927230804 </telefono>
+      <servicios>
+        <servicio> Restaurante </servicio>
+      </servicios>
+    </gasolinera>
+    <gasolinera id="gas4">
+      <localidad provincia="Cáceres"> Galisteo </localidad>
+      <compañia> Cepsa </compañia>
+      <carretera puntoKilometrico="65"> EX-108 </carretera>
+      <telefono> 927123456 </telefono>
+    </gasolinera>
+    <gasolinera id="gas5">
+      <localidad provincia="Badajoz"> Almendralejo </localidad>
+      <compañia> Cepsa </compañia>
+      <carretera puntoKilometrico="648"> N-630 </carretera>
+      <telefono> 927654321 </telefono>
+      <servicios>
+        <servicio> Restaurante </servicio>
+        <servicio> Lavado </servicio>
+        <servicio> Parking camiones </servicio>
+      </servicios>
+    </gasolinera>
+  </comunidad>
+  <comunidad nombre="Castilla la Mancha">
+    <gasolinera id="gas6">
+      <localidad provincia="Toledo"> Calera y Chozas </localidad>
+      <compañia> Galp </compañia>
+      <carretera puntoKilometrico="137"> A-5 </carretera>
+      <telefono> 925993999 </telefono>
+      <servicios>
+        <servicio> Restaurante </servicio>
+        <servicio> Lavado </servicio>
+      </servicios>
+    </gasolinera>
+  </comunidad>
+</redGasolineras>

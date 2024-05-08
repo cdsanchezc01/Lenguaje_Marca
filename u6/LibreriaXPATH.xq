@@ -60,6 +60,47 @@ elemento <price> con valor superior a 35:)
 
 (:Devuelve cualquier elemento <title> que contenga algún atributo:)
 (://title/@*:)
+(:Ejes:)
+(://book[price=29.99]/ancestor::*
+//book[price=29.99]/title/following::*
+//book[price=29.99]/title/following-sibling::*:)
+
+(:Funciones:)
+(:last->Mostrar el ultimo libro:)
+(://book[last()]:)
+(:last-> Mostrar el titulo del ultimo libro:)
+(://book[last()]/title:)
+(:Position-> Posicion que ocupa el libro 'Aprendiendo Java':)
+(://book[position()=3]:)
+(:Count-> Contar cuantos nodos title hay:)
+(:count(//title):)
+(:Count-> Contar cuantos nodos title hay:)
+(:count(//book[price<20]):)
+(:count(//price[.<20]):)
+(:SUM->Sumar los precios de los libros:)
+(:sum(//book/price):)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
