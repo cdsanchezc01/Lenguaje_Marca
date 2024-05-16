@@ -1,0 +1,12 @@
+body{
+	background-color:#03a9f4;
+}
+table{
+	border:1px solid white;
+	border-collapse:collapse;
+	margin:10px;
+}
+th,td{
+	border:1px solid white;
+	border-collapse:collapse;
+}
