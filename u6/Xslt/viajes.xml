@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mayorista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="viajes.xsd" >
+
+	<nombre>MoonTours</nombre><!-- lsito-->
+	<direccion>Calle Falsa 123, Ciudad, País </direccion><!-- lsito-->
+	<telefono>+34 123-456-789</telefono><!-- lsito-->
+	
+	<viaje codigo="V12345" fechaInicio="2024-05-01" fechaFin="2024-09-30"><!-- lsito-->
+		<destinos>
+			<destino ciudad="París" pais="Francia" continente="Europa" /> <!-- lsito-->
+			<destino ciudad="Roma" pais="Italia" continente="Europa" />
+		</destinos>
+		<precio moneda="EUR">1200.00</precio><!-- lsito-->
+		<duracion>7 días</duracion>
+		<visitas>
+			<visita>Visita Torre Eiffel.</visita>
+			<visita>Visita al Coliseo y al Foro Romano.</visita>
+			<visita>Excursión a la Ciudad del Vaticano.</visita>
+		</visitas>
+		<alojamiento>
+			<hotel nombre="Hotel Notre Dame">
+				<categoria estrellas="3"/>
+				<direccion>187 Pl. Jean-Paul II, 75004 Paris, Francia</direccion>
+			</hotel>
+			<hotel nombre="Hotel Roma" regimen="PC">
+				<direccion>Via Nazionale 22, Roma, Italia</direccion>
+				<categoria estrellas="4"/>
+				<web url="http://wwww.hotelRoma.it"/>
+			</hotel>
+		</alojamiento>
+		<oferta>
+			<descuento> 20% al contratar antes del 31 de Mayo de 2024</descuento>
+		</oferta>
+	</viaje>
+	
+	<viaje codigo="V67890">
+		<destinos>
+			<destino ciudad="Nueva York" pais="Estados Unidos" continente="América" />
+		</destinos>
+		<precio moneda="USD">1500.00</precio>
+		<duracion>5 días</duracion>
+		<visitas>
+			<visita>Visita a la Estatua de la Libertad y al Central Park.</visita>
+			<visita>Paseo por Times Square y Broadway.</visita>
+			<visita>Excursión al Museo Metropolitano de Arte.</visita>
+		</visitas>
+		<alojamiento>
+			<hotel nombre="Hotel Manhattan"  regimen="AD">
+				<direccion>123 5th Ave, Nueva York, Estados Unidos</direccion>
+				<categoria estrellas="5"/>
+			</hotel>
+		</alojamiento>
+		<oferta>
+			<bono>Bebida incluída</bono>
+		</oferta>
+	</viaje>
+	
+	<viaje codigo="V34567">
+		<destinos>
+			<destino ciudad="Tokio" pais="Japón" continente="Asia" />
+		</destinos>
+		<precio moneda="JPY">200000.00</precio>
+		<duracion>10 días</duracion>
+		<visitas>
+			<visita>Visita al Templo Senso-ji y al barrio de Asakusa.</visita>
+			<visita>Paseo por el Parque Ueno y el Museo Nacional de Tokio.</visita>
+			<visita>Excursión a la Torre de Tokio y al barrio de Shibuya.</visita>
+			<visita>Visita a los jardines del Palacio Imperial.</visita>
+		</visitas>
+		<alojamiento>
+			<hotel nombre="Apartamentos Tokyo" regimen="MP">
+				<direccion>1 Chome-1-1 Oshiage, Tokio, Japón</direccion>
+				<web url="http://wwww.TokyoApartments.com"/>
+				<categoria llaves="3"/>
+			</hotel>
+		</alojamiento>
+	</viaje>
+	
+	<viaje codigo="V456765" fechaInicio="2024-06-01" fechaFin="2024-09-30">
+		
+		<destinos>
+			<destino ciudad="Oslo" pais="Noruega" continente="Europa" />
+		</destinos>
+		<precio moneda="EUR">2100.00</precio>
+		<duracion>5 días</duracion>
+		
+		<visitas>
+			<visita>Crucero Fiordos.</visita>
+			<visita>Museo de los Barcos Vikingos.</visita>
+		</visitas>
+		
+		<alojamiento>
+			<hotel nombre="Hotel Central Square">
+				<categoria estrellas="5"/>
+				<direccion>Citybox Oslo, Prinsens gate 6, 0152 Oslo, Noruega</direccion>
+				<web url="http://wwww.centralTour.com"/>
+			</hotel>
+		</alojamiento>
+	</viaje>
+	
+</mayorista>
+		

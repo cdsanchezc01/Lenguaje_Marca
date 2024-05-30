@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="coches"> <!-- Elemento Raiz-->
+<!-- Definimos elementos directos del raiz -->
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="fabricantes" type="tipoF"/>
+            <xs:element name="modelos" type="tipoM"/>
+            <xs:element ref="premios"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+<!-- Luego poco a poco voy definiendo casa elemento primero padres y leugo hijos -->
+<xs:element name="premios">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="premio" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:attribute name="nombre" type="xs:string" use="required"/>
+                        <xs:attribute  name="año" type="tipoAño" use="required"/>
+                        <xs:attribute  name="modelo" type="xs:string" use="required"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<!-- Defino tipoM, anteriormente en la linea 6-->
+<xs:complexType name="tipoF">
+    <xs:sequence>
+        <xs:element name="fabricante" maxOccurs="unbounded"/>
+        <xs:element>
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="fundador" type="xs:string" minOccurs="0"/>
+                    <xs:element name="fundacion" minOccurs="0">
+                    <xs:complexType>
+                        <xs:attribute name="año" type="tipoAño" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="pais" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+        </xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<!-- Defino tipoM, anteriormente en la linea 7-->
+<xs:complexType name="tipoM">
+    <xs:sequence>
+        <xs:element name="modelo" minOccurs="0"></xs:element>
+        <xs:element>
+            <xs:complexType>
+                <xs:sequence> 
+                    <xs:element name="nombre" type="xs:string"/>
+                    <xs:element name="segmento" type="tipoSegmento"/>
+                    <xs:element name="inicio" type="xs:string">
+                    <xs:complexType>
+                        <xs:attribute name="año" type="tipoAño" use="required" />
+                    </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="fabricante" type="xs:IDREF" use="required"/>
+            </xs:complexType>
+        </xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<!-- Tipo de restricion para numeros-->
+<xs:simpleType name="tipoAño">
+    <xs:restriction base="xs:int">
+        <xs:minInclusive value="1850"/>
+        <xs:maxExclusive value="2100"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<!--Lista para restricciones -->
+<xs:simpleType name="tipoSegmento">
+    <xs:restriction base="xs:string">
+        <xs:length value="A"/>
+        <xs:length value="B"/>
+        <xs:length value="C"/>
+        <xs:length value="D"/>
+        <xs:length value="E"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<!--Patrones o plantillas -->
+<xs:simpleType name="tipoSegmento2">
+    <xs:restriction>
+        <xs:pattern value="[A-D]"/>
+    </xs:restriction>
+</xs:simpleType>
+
+</xs:schema>
+
+
+<!-- 1º Que tipo es? 
+    2º tiene atributos? 
+    3º comprobar los hijos y sacar en claro si es </xs:sequence> o algún otro  -->

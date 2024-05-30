@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="mayorista">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="direccion" type="xs:string"/>
+                <xs:element name="telefono" type="xs:string"/>
+                <xs:element ref="viaje"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="viaje">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="destinos"/>
+                <xs:element ref="precio"/>
+                <xs:element name="duracion" type="xs:string"/>
+                <xs:element ref="visitas"/>
+                <xs:element ref="alojamiento"/>
+                <xs:element ref="oferta"/>
+            </xs:sequence>
+            <xs:attribute name="codigo" type="xs:string" use="required"/>
+            <xs:attribute name="fechaInicio" type="xs:date" use="required"/>
+            <xs:attribute name="fechaFin" type="xs:date" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="destinos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="destino">
+                    <xs:complexType>
+                        <xs:attribute name="ciudad" type="xs:string" use="required"/>
+                        <xs:attribute name="pais" type="xs:string" use="required"/>
+                        <xs:attribute name="continente" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="precio">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:double">
+                    <xs:attribute name="moneda" type="xs:string" use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="visitas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="visita" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="alojamiento">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="hotel"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="hotel">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="categoria"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="oferta">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element name="descuento" type="xs:string"/>
+                <xs:element name="bono" type="xs:string"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</xs:schema>
+
+    
