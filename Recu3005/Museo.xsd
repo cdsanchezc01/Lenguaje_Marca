@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="museo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="contacto"/>
+                <xs:element ref="maquinas"/>
+                <xs:element name="patrocinador" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="pais" type="xs:string" use="required"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="contacto"> <!-- falta definir numero veces-->
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="telefono" maxOccurs="unbounded"/>
+                <xs:element name="email" type="xs:string" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="telefono">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="pais" type="xs:string" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="maquinas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="maquina" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="maquina">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="fabricante" type="xs:string"/>
+                <xs:element name="anio" type="tipoAnio" minOccurs="0"/>
+                <xs:element name="foto" type="xs:string"/>
+                <xs:element name="modelo" type="xs:string"/>
+                <xs:element ref="adquisicion" minOccurs="0"/>
+            </xs:all>
+            <xs:attribute name="codigo" type="tipoCod" use="required"/>
+            <xs:attribute name="tipo" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="adquisicion">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element ref="compra"/>
+                <xs:element name="donacion" type="tipoCompra"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="compra">
+        <xs:complexType>
+            <xs:attribute name="moneda" type="xs:string" use="required"/>
+            <xs:attribute name="importe" type="xs:double" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="tipoCod">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="[M][0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoAnio">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1850"/>
+            <xs:maxExclusive value="1999"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="tipoCompra">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="donacion"/>
+			<xs:enumeration value="compra"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

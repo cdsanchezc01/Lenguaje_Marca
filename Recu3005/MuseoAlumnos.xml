@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<museo  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Museo.xsd">
+    <!-- Información de contacto del museo -->
+    <contacto>
+        <telefono pais="ESP">987 654 321</telefono>
+		<telefono>927 111 222</telefono>
+        <email>info@museodecomputacion.com</email>
+		<email>admin@museodecomputacion.com</email>
+    </contacto>
+
+    <!-- Lista de máquinas expuestas -->
+    <maquinas>
+		<maquina codigo="M001" tipo="PC">
+            <fabricante>Atari</fabricante>
+            <anio>1979</anio>
+			<foto>m001.png</foto>
+            <modelo>Atari 400</modelo>
+        </maquina>
+        <maquina codigo="M002" tipo="IMPR">
+			<adquisicion>
+				<compra moneda="EUR" importe="1.50"/>
+			</adquisicion>
+            <fabricante>HP</fabricante>
+            <modelo>HP LaserJet</modelo>
+			<foto>m002.png</foto>
+        </maquina>
+		<maquina codigo="M003" tipo="PC">
+			<modelo>Commodore 64</modelo>
+            <fabricante>Commodore</fabricante>
+            <anio>1982</anio>
+			<adquisicion>
+				<compra moneda="EUR" importe="600.50"/>
+			</adquisicion>
+			<foto>m003.png</foto>
+        </maquina>
+        <maquina codigo="M004" tipo="PC">
+            <fabricante>Sinclair</fabricante>
+            <modelo>Sinclair ZX Spectrum</modelo>
+			<foto>m004.png</foto>
+			<adquisicion>
+				<donacion>Citröen-Vigo</donacion>
+			</adquisicion >
+        </maquina>
+        <maquina codigo="M005" tipo="CALC" >
+			<anio>1976</anio>
+            <modelo>TI-30</modelo>
+            <fabricante>Texas Instruments</fabricante>
+			<adquisicion>
+				<donacion>Universidad de Extremadura</donacion>
+			</adquisicion >
+			<foto>m005.png</foto>
+        </maquina>
+    </maquinas>
+
+    <!-- Patrocinadores -->
+	<patrocinador pais="ESP">Universidad de Extremadura</patrocinador>
+	<patrocinador pais="USA">Instituto Tecnológico de Massachusetts (MIT)</patrocinador>
+	<patrocinador pais="UK">Universidad de Cambridge</patrocinador>
+	<patrocinador pais="ESP">IBM Spain</patrocinador>
+</museo>
