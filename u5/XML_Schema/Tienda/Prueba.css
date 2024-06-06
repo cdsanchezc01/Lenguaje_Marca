@@ -1,0 +1,116 @@
+
+#titulo h1{
+    text-shadow: -5px -5px 3px orange;
+    color: navy;
+    text-align: center;
+}
+li{
+    list-style: none; /*Quitamos el punto*/
+}
+
+nav li{
+    display: inline-block; /*Quitamos el subrayado*/
+    text-;
+}
+
+
+nav a{
+    text-decoration: none;
+    border: 1px solid navy;
+    border-radius: 5px;
+    padding: 5px; /*area relleno*/
+    color: navy;
+    margin: 5px;  /*margen entre uno y otros*/
+
+}
+nav a:hover{ /*Se activa al pasar por encima*/
+    border: 2px dashed orange ;  /*dashed = borde discontinuo*/
+    background-color: navy;
+    color:white;
+    border-radius: 5px;
+}
+
+#cat li{
+    background-image:linear-gradient(to right, #ff9800, white); /*crear un fondo degradado*/
+    width: 100px; /*ancho*/
+    box-shadow: navy -5px -5px 3px; /*Sombra*/
+    text-decoration: none;
+    border: 1px solid navy;
+    border-radius: 5px;
+    padding: 5px;
+    color: navy;
+    margin: 6px; 
+}
+#cat li:hover{
+    transform: scale(1.2,1.2); /*Trasformaos en escala*/
+}
+aside h3{
+    text-transform: uppercase;
+    color: navy;
+}
+@keyframes color { /*Definimos transicion de colores*/
+    0% {color:red;}
+    50% {color:silver;}
+    100% {color:red;}
+}
+#promo li{
+    border: 1px solid navy;
+    border-radius: 5px;
+    padding: 5px; /*area relleno*/
+    color: navy;
+    margin: 10px; 
+    width: 200px;
+    animation: color 3s linear  2s  infinite normal;
+}
+
+ article{
+    border: 1px solid navy;
+    box-shadow: 1px -5px 1px;
+    padding: 5px;
+    margin: 10px;
+    width: 200px;
+    color: navy;
+}
+footer{
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+body{
+    display: grid; 
+    grid-template-columns: 20% auto 20%; /* Define tres columnas: dos de 20% de ancho y una central que ocupa el resto del espacio */
+    grid-template-rows: auto auto auto; /* Define tres filas, todas con altura automática */
+    grid-template-areas: 
+    "cab cab cab"    /* La primera fila ocupa tres columnas para el encabezado */
+    "cat ppal promo" /* La segunda fila tiene tres áreas: cat (categorías), ppal (principal) y promo (promociones) */
+     "pie pie pie";  /* La tercera fila ocupa tres columnas para el pie de página */
+}
+header{
+    grid-area: cab;
+    display: flex;
+    justify-content: center;
+}
+#cat{
+    grid-area: cat;
+}
+#art{
+    grid-area: ppal;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* se utiliza para queelementos flexibles deben forzarse en una sola línea o pueden fluir en varias líneas si es necesario. */
+    justify-content: flex-start;
+
+}
+#promo{
+    grid-area:promo;
+}
+footer{
+    grid-area: pie;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+article{
+    flex-grow: 1; /*ignifica que el elemento puede crecer para ocupar el espacio disponible en el contenedor, y lo hará en proporción a otros elementos flexibles.*/
+}

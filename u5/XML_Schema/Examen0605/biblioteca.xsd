@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="biblioteca">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="libros" minOccurs="1"/>
+                <xs:element ref="socio" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="libros">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="libro" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="libro"> <!-- Error atribute-->
+        <xs:complexType> <!-- acuerdate como se define lo hemos hecho element y eso -->
+                    <xs:attribute name="isbn" type="xs:string" use="required"/>
+                    <xs:attribute name="ejemplares" type="xs:int" use="required"/>
+                    <xs:attribute name="editorial" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="socio">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="apellidos" type="xs:string"/>
+                <xs:element ref="telefonos" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref="prestamos" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:choice>
+                <xs:attribute name="dni" type="xs:string" use="required"/>
+                <xs:attribute name="fechaSancion" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="telefonos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="telefono">
+                    <xs:complexType>
+                        <xs:attribute name="tipo" type="xs:string" use="required"/>
+                        <xs:attribute name="numero" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+   <xs:element name="prestamos">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="prestamo">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="fecha" type="xs:string"/>
+                        <xs:element name="isbn" type="xs:string"/>
+                        <xs:element name="fecha_devolucion" type="xs:string"/>
+                        <xs:element name="fecha" type="xs:string"/>
+                   </xs:sequence>
+                    <xs:attribute name="codigo" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+</xs:schema>

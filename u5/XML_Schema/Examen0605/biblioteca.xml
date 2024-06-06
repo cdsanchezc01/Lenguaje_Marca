@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="biblioteca.xsd">
+	<libros>
+		<libro isbn="l1" ejemplares="3" editorial="http://www.anaya.com">Don Quijote de la Mancha</libro>
+		<libro isbn="l2" ejemplares="2" editorial="http://www.sm.com">La familia de Pascual Duarte</libro>
+		<libro isbn="l3" ejemplares="6" editorial="http://www.santillana.com">El lazarillo de Tormes</libro>
+	</libros>
+	<socio dni="11111111A" fechaSancion="2024-06-01">
+		<nombre>Andrés</nombre>
+		<apellidos>Santos</apellidos>
+		<telefonos>
+			<telefono tipo="F" numero="959 232 323"/>
+			<telefono tipo="M" numero="711 232 323"/>
+			<telefono tipo="M" numero="811 232 323"/>
+		</telefonos>
+		<prestamos>
+			<prestamo codigo="P1">
+				<fecha>2012-05-01</fecha>
+				<isbn>l1</isbn>
+				<fecha_devolucion>2012-05-15</fecha_devolucion>
+			</prestamo>
+			<prestamo codigo="P5">
+				<isbn>l3</isbn>
+				<fecha>2024-05-10</fecha>
+			</prestamo>
+		</prestamos>
+	</socio>
+	<socio dni="22222222B">
+		<nombre>Alice</nombre>
+		<apellidos>Williams</apellidos>
+		<telefonos>
+			<telefono tipo="M" numero="822 232 323"/>
+		</telefonos>
+		<prestamos>
+			<prestamo codigo="P2">
+				<isbn>l2</isbn>
+				<fecha>2024-04-01</fecha>
+				<fecha_devolucion>2024-04-15</fecha_devolucion>
+			</prestamo>
+			<prestamo codigo="P3">
+				<isbn>l1</isbn>
+				<fecha>2024-05-01</fecha>
+				<fecha_devolucion>2024-05-15</fecha_devolucion>
+			</prestamo>
+		</prestamos>
+	</socio>
+	<socio dni="33333333C">
+		<nombre>Ana</nombre>
+		<apellidos>Torroja</apellidos>
+		<telefonos>
+			<telefono tipo="F" numero="927 333 323"/>
+		</telefonos>
+	</socio>
+</biblioteca>

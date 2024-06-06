@@ -1,0 +1,167 @@
+/* Estilo general del cuerpo (body) */
+body {
+    display: grid;
+    grid-template-columns: 20% auto 20%; /* Define tres columnas: dos de 20% de ancho y una central que ocupa el resto del espacio */
+    grid-template-rows: auto auto auto; /* Define tres filas, todas con altura automática */
+    grid-template-areas: 
+        "cab cab cab"      /* La primera fila ocupa tres columnas para el encabezado */
+        "cat ppal promo"   /* La segunda fila tiene tres áreas: cat (categorías), ppal (principal) y promo (promociones) */
+        "pie pie pie";     /* La tercera fila ocupa tres columnas para el pie de página */
+}
+
+/* Estilado del encabezado (header) */
+header {
+    grid-area: cab; /* Asigna el área del encabezado a la región "cab" definida en grid-template-areas */
+}
+
+/* Estilado del título */
+#titulo h1 {
+    color: darkblue;
+    text-align: center; /* Centra el texto del título horizontalmente */
+    font-weight: bold;
+    font-size: 40px;
+    text-shadow: -10px -10px 5px orange; /* Aplica una sombra de texto */
+}
+
+/* Estilado del menú de navegación (nav) */
+#titulo ul {
+    display: flex; /* Utiliza Flexbox para distribuir los elementos del menú */
+    justify-content: center; /* Centra los elementos del menú horizontalmente */
+    gap: 10px; /* Espacio entre los elementos */
+    list-style: none; /* Elimina los puntos de la lista */
+}
+
+#titulo a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+#titulo li {
+    border: 1px solid blue;
+    padding: 5px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+#titulo li:hover {
+    border: 2px dashed orange;
+    background-color: darkblue;
+    border-radius: 5px;
+    color: white;
+}
+
+#titulo a:hover {
+    color: white;
+}
+
+/* Fin del estilado del nav */
+
+/* Estilado del campo de búsqueda (#busqueda) */
+#busqueda {
+    position: absolute; /* Posiciona el campo de búsqueda de manera absoluta */
+    top: 1%; /* A 1% desde el borde superior */
+    right: 0%; /* Pegado al borde derecho */
+}
+
+#busqueda input:hover {
+    background-color: orange; /* Cambia el color de fondo del campo de búsqueda al pasar el mouse */
+}
+
+/* Fin estilado búsqueda */
+
+/* Estilado de la sección de categorías (#cat) */
+#cat {
+    grid-area: cat; /* Asigna el área de categorías a la región "cat" definida en grid-template-areas */
+}
+
+#cat h3 {
+    color: darkblue;
+    font-weight: bold;
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+}
+
+#cat ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+}
+
+#cat li {
+    width: 100px;
+    background-image: linear-gradient(to right, orange, white); /* Fondo con degradado de naranja a blanco */
+    box-shadow: -8px -8px 3px navy; /* Sombra de caja */
+    border: 1px solid navy;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    color: navy;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#cat li:hover {
+    transform: scale(1.2, 1.2); /* Aumenta el tamaño del elemento al pasar el mouse */
+}
+
+/* Estilado de la sección de promociones (#promo) */
+#promo {
+    grid-area: promo; /* Asigna el área de promociones a la región "promo" definida en grid-template-areas */
+}
+
+#promo h3 {
+    color: darkblue;
+    font-weight: bold;
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+}
+
+#promo ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+}
+
+#promo li {
+    color: darkred;
+    font-size: 20px;
+    border: 1px solid navy;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    animation: color 5s linear 2s infinite normal; /* Aplica una animación de cambio de color */
+}
+
+@keyframes color {
+    0% { color: red; }
+    50% { color: aquamarine; }
+    100% { color: blueviolet; }
+}
+
+/* Estilado de artículos */
+article h3 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#art {
+    grid-area: ppal; /* Asignamos el area principal a la región "ppal" definida en grid-template-areas */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+article {
+    flex-grow: 1;
+    width: 300px;
+    border: 1px solid silver;
+    box-shadow: 2px -5px 3px navy;
+    margin: 10px;
+    padding: 15px;
+}
+
+/* Estilado del pie de página (footer) */
+footer {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    grid-area: pie; /* Asignamos el área del pie de página a la región "pie" definida en grid-template-areas */
+}
+
+
+
+

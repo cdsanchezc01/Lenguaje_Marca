@@ -1,0 +1,100 @@
+body h1{
+	font-family:Comic Sans MS;
+    text-shadow: -3px -3px 3px silver;
+    color: steelblue;
+    text-align: center;
+}
+body>h1{
+	grid-area: cab;
+	background-image:linear-gradient(to right, steelblue, white); 
+	text-align:center;
+	font-family:Comic Sans MS;
+	
+}
+
+li{
+    list-style: none;
+}
+nav li{
+	font-family:Comic Sans MS;
+    text-decoration: none;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 5px; 
+    color: steelblue;
+    margin: 5px;	
+	width: 100px;
+
+}
+nav li:hover{
+	 border: 2px silver;  
+    background-color: steelblue;
+    color:white;
+    border-radius: 5px;
+}
+section{
+	font-family:Comic Sans MS;
+    width: 300px;
+    box-shadow: coral -1px -5px 3px; 
+    text-decoration: none;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 5px;
+    color: steelblue;
+    margin: 20px; 
+}
+
+#cursos p:hover{	/* # para los ID y el :hover es para que se active al pasar el raton*/	
+	transform:rotate(90deg);	/* Trasnfromacion: rotamos 90segundos*/
+}
+aside article:hover{
+	transform:rotate(10deg);
+	
+}
+strong{
+	text-decoration: underline; /*es viñeta*/
+}
+footer{
+	background-image:linear-gradient(to right, steelblue, white); 
+	text-align:center;
+	font-family:Comic Sans MS;
+}
+body{
+    display: grid; 
+    grid-template-columns: 20% auto 20%; 
+    grid-template-rows: auto auto auto; 
+    grid-template-areas: 
+    "cab cab cab"    
+    "cat ppal promo" 
+     "pie pie pie";  
+}
+head{
+	 grid-area: cab;
+    display: flex;
+    justify-content: center;
+}
+header{
+    grid-area: cat;
+    display: flex;
+    justify-content: center;
+}
+main{
+    grid-area: ppal;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: flex-start;
+
+}
+aside{
+    grid-area:promo;
+}
+footer{
+	grid-area: pie;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+section{
+    flex-grow: 1; 
+}
